@@ -1,9 +1,12 @@
 import Container from "../../../components/defaults/Container"
+import Hero from "../../../components/footwear/Hero"
 
 const FootwearHome = () => {
   return (
     <Container>
-        <h2>Footwear Home</h2>
+        <div className="w-[90vw] mx-auto">
+          <Hero />
+        </div>
     </Container>
   )
 }
