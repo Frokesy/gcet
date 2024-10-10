@@ -1,7 +1,9 @@
+import FootwearHome from "./pages/footwear/home"
+
 const App = () => {
   return (
     <div>
-      <h2>Project initialized</h2>      
+      <FootwearHome />
     </div>
   )
 }
