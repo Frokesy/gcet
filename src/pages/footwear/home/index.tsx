@@ -1,14 +1,14 @@
-import Container from "../../../components/defaults/Container"
-import Hero from "../../../components/footwear/Hero"
+import Container from "../../../components/defaults/Container";
+import Hero from "../../../components/footwear/Hero";
+import MiniGallery from "../../../components/footwear/MiniGallery";
 
 const FootwearHome = () => {
   return (
     <Container>
-        <div className="w-[90vw] mx-auto">
-          <Hero />
-        </div>
+      <Hero />
+      <MiniGallery />
     </Container>
-  )
-}
+  );
+};
 
-export default FootwearHome
+export default FootwearHome;

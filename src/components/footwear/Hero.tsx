@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="lg:py-[10vh] pt-2 pb-10 flex lg:flex-row flex-col-reverse justify-between items-center">
+    <div className="lg:py-[10vh] w-[90vw] mx-auto pt-2 pb-10 flex lg:flex-row flex-col-reverse justify-between items-center">
       <div className="lg:w-[45%]">
         <h2 className="font-bold lg:text-[64px] text-[32px] uppercase">
           Shop quality <br /> footwears.
