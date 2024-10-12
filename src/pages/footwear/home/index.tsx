@@ -3,6 +3,7 @@ import BestSellers from "../../../components/footwear/BestSellers";
 import Categories from "../../../components/footwear/Categories";
 import Hero from "../../../components/footwear/Hero";
 import MiniGallery from "../../../components/footwear/MiniGallery";
+import Reviews from "../../../components/footwear/Reviews";
 
 const FootwearHome = () => {
   return (
@@ -11,6 +12,7 @@ const FootwearHome = () => {
       <MiniGallery />
       <Categories />
       <BestSellers />
+      <Reviews />
     </Container>
   );
 };
