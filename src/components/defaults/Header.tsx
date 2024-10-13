@@ -9,14 +9,16 @@ import {
 } from "../svgs/HeaderIcons";
 import CategoriesDropdown from "../footwear/dropdowns/CategoriesDropdown";
 import BrandDropdown from "../footwear/dropdowns/BrandDropdown";
+import HomeDropdown from "../footwear/dropdowns/HomeDropdown";
 
 const Header = () => {
   const [revealCategoryDropdown, setRevealCategoryDropdown] =
     useState<boolean>(false);
   const [revealBrandDropdown, setRevealBrandDropdown] =
     useState<boolean>(false);
+  const [revealHomeDropdown, setRevealHomeDropdown] = useState<boolean>(false);
   return (
-    <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] bg-[#fff]">
+    <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] z-50 bg-[#fff]">
       <div className="w-[90vw] mx-auto py-3 flex justify-between items-center">
         <div className="flex items-center space-x-10">
           <img
@@ -25,15 +27,27 @@ const Header = () => {
             className="max-w-[48px] max-h-[48px]"
           />
           <div className="lg:flex hidden space-x-8">
-            <div className="flex items-center space-x-2">
+            <div
+              onClick={() => {
+                if (revealBrandDropdown || revealCategoryDropdown) {
+                  setRevealBrandDropdown(false);
+                  setRevealCategoryDropdown(false);
+                  setRevealHomeDropdown(!revealHomeDropdown);
+                } else {
+                  setRevealHomeDropdown(!revealHomeDropdown);
+                }
+              }}
+              className="flex items-center space-x-2 cursor-pointer"
+            >
               <h2>Home</h2>
               <CaretDown />
             </div>
             <div
               className="flex items-center space-x-2 cursor-pointer"
               onClick={() => {
-                if (revealBrandDropdown) {
-                  setRevealBrandDropdown(!revealBrandDropdown);
+                if (revealBrandDropdown || revealHomeDropdown) {
+                  setRevealBrandDropdown(false);
+                  setRevealHomeDropdown(false);
                   setRevealCategoryDropdown(!revealCategoryDropdown);
                 } else {
                   setRevealCategoryDropdown(!revealCategoryDropdown);
@@ -46,8 +60,9 @@ const Header = () => {
             <h2
               className="cursor-pointer"
               onClick={() => {
-                if (revealCategoryDropdown) {
-                  setRevealCategoryDropdown(!revealCategoryDropdown);
+                if (revealCategoryDropdown || revealHomeDropdown) {
+                  setRevealCategoryDropdown(false);
+                  setRevealHomeDropdown(false);
                   setRevealBrandDropdown(!revealBrandDropdown);
                 } else {
                   setRevealBrandDropdown(!revealBrandDropdown);
@@ -79,6 +94,7 @@ const Header = () => {
       </div>
       {revealCategoryDropdown && <CategoriesDropdown />}
       {revealBrandDropdown && <BrandDropdown />}
+      {revealHomeDropdown && <HomeDropdown />}
     </div>
   );
 };
