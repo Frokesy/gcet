@@ -8,9 +8,12 @@ import {
   ShopIcon,
 } from "../svgs/HeaderIcons";
 import CategoriesDropdown from "../footwear/dropdowns/CategoriesDropdown";
+import BrandDropdown from "../footwear/dropdowns/BrandDropdown";
 
 const Header = () => {
   const [revealCategoryDropdown, setRevealCategoryDropdown] =
+    useState<boolean>(false);
+  const [revealBrandDropdown, setRevealBrandDropdown] =
     useState<boolean>(false);
   return (
     <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] bg-[#fff]">
@@ -28,12 +31,31 @@ const Header = () => {
             </div>
             <div
               className="flex items-center space-x-2 cursor-pointer"
-              onClick={() => setRevealCategoryDropdown(!revealCategoryDropdown)}
+              onClick={() => {
+                if (revealBrandDropdown) {
+                  setRevealBrandDropdown(!revealBrandDropdown);
+                  setRevealCategoryDropdown(!revealCategoryDropdown);
+                } else {
+                  setRevealCategoryDropdown(!revealCategoryDropdown);
+                }
+              }}
             >
               <h2>Categories</h2>
               <CaretDown />
             </div>
-            <h2>Brands</h2>
+            <h2
+              className="cursor-pointer"
+              onClick={() => {
+                if (revealCategoryDropdown) {
+                  setRevealCategoryDropdown(!revealCategoryDropdown);
+                  setRevealBrandDropdown(!revealBrandDropdown);
+                } else {
+                  setRevealBrandDropdown(!revealBrandDropdown);
+                }
+              }}
+            >
+              Brands
+            </h2>
             <h2>Contact us</h2>
           </div>
         </div>
@@ -56,6 +78,7 @@ const Header = () => {
         </div>
       </div>
       {revealCategoryDropdown && <CategoriesDropdown />}
+      {revealBrandDropdown && <BrandDropdown />}
     </div>
   );
 };
