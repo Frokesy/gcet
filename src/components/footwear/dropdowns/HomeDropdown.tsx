@@ -1,9 +1,11 @@
+import { NavLink } from "react-router-dom";
+
 const HomeDropdown = () => {
   return (
     <div className="bg-[#fff] shadow-xl left-[9vw] py-4 pl-3 pr-6 fixed">
       <div className="">
         <div className="space-y-6 text-[16px]">
-          <p>Home Page 1</p>
+          <NavLink to="/">Home Page 1</NavLink>
           <p>Home Page 2</p>
           <p>Home Page 3</p>
           <p>Home Page 4</p>

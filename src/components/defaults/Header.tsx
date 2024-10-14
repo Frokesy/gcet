@@ -10,6 +10,7 @@ import {
 import CategoriesDropdown from "../footwear/dropdowns/CategoriesDropdown";
 import BrandDropdown from "../footwear/dropdowns/BrandDropdown";
 import HomeDropdown from "../footwear/dropdowns/HomeDropdown";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [revealCategoryDropdown, setRevealCategoryDropdown] =
@@ -21,11 +22,13 @@ const Header = () => {
     <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] z-50 bg-[#fff]">
       <div className="w-[90vw] mx-auto py-3 flex justify-between items-center">
         <div className="flex items-center space-x-10">
-          <img
-            src="/assets/logo.png"
-            alt="logo"
-            className="max-w-[48px] max-h-[48px]"
-          />
+          <NavLink to="/">
+            <img
+              src="/assets/logo.png"
+              alt="logo"
+              className="max-w-[48px] max-h-[48px]"
+            />
+          </NavLink>
           <div className="lg:flex hidden space-x-8">
             <div
               onClick={() => {
@@ -71,7 +74,7 @@ const Header = () => {
             >
               Brands
             </h2>
-            <h2>Contact us</h2>
+            <NavLink to="/contact">Contact us</NavLink>
           </div>
         </div>
         <div className="lg:hidden block">
