@@ -1,9 +1,10 @@
-import FootwearHome from "./pages/footwear/home"
+import Contact from "./pages/footwear/contact"
 
 const App = () => {
   return (
     <div>
-      <FootwearHome />
+      {/* <FootwearHome /> */}
+      <Contact />
     </div>
   )
 }
