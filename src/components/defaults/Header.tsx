@@ -92,7 +92,9 @@ const Header = () => {
           </div>
           <ShopIcon />
           <CartIcon />
-          <AccountIcon />
+          <NavLink to="/profile">
+            <AccountIcon />
+          </NavLink>
         </div>
       </div>
       {revealCategoryDropdown && <CategoriesDropdown />}
