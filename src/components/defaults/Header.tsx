@@ -90,7 +90,9 @@ const Header = () => {
               className="border-none outline-none placeholder:text-[#333] bg-inherit"
             />
           </div>
-          <ShopIcon />
+          <NavLink to="/shop">
+            <ShopIcon />
+          </NavLink>
           <CartIcon />
           <NavLink to="/profile">
             <AccountIcon />
