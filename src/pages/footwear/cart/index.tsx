@@ -127,7 +127,7 @@ const Cart = () => {
               </div>
               <div className="flex justify-between p-3 rounded-lg border border-[#333]">
                 <div className="flex items-center space-x-3">
-                  <input type="radio" checked name="deliveryFee" id="" />
+                  <input type="radio" defaultChecked name="deliveryFee" id="" />
                   <h2>Subtotal</h2>
                 </div>
                 <p className="flex items-center font-semibold space-x-2 text-[14px]">
