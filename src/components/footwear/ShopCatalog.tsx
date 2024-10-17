@@ -1,8 +1,22 @@
+import { FC, SetStateAction } from "react";
 import Five from "../stars/Five";
 import { Naira } from "../svgs/extras";
 
-const ShopCatalog = () => {
-    const items = [
+interface CatalogProps {
+    setProduct: React.Dispatch<SetStateAction<ProductProps | undefined>>;
+}
+
+export interface ProductProps {
+    id: number;
+    productImg: string;
+    name: string;
+    ratingIcon: React.ReactElement;
+    price: string;
+    category: string;
+}
+
+const ShopCatalog: FC<CatalogProps> = ({ setProduct }) => {
+    const items: ProductProps[] = [
         {
           id: 1,
           productImg: "/assets/footwear/shops/shop-img-one.png",
@@ -170,7 +184,8 @@ const ShopCatalog = () => {
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex-shrink-0 flex flex-col space-y-1 lg:w-[248px] w-[176px]"
+            onClick={() => setProduct(item)}
+            className="flex-shrink-0 flex flex-col space-y-1 cursor-pointer lg:w-[248px] w-[176px]"
           >
             <img
               src={item.productImg}
