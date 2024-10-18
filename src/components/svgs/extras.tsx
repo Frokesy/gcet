@@ -392,3 +392,91 @@ export const Menu = () => (
     />
   </svg>
 );
+
+export const Bin = () => (
+  <svg
+    width="24"
+    height="25"
+    viewBox="0 0 24 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19.5 5.82666L18.6139 20.4477C18.5499 21.5033 17.6751 22.3267 16.6175 22.3267H7.38246C6.32488 22.3267 5.4501 21.5033 5.38612 20.4477L4.5 5.82666"
+      stroke="#6C7275"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3 5.82666H8M8 5.82666L9.24025 2.93274C9.39783 2.56506 9.75937 2.32666 10.1594 2.32666H13.8406C14.2406 2.32666 14.6022 2.56506 14.7597 2.93274L16 5.82666M8 5.82666H16M21 5.82666H16"
+      stroke="#6C7275"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9.5 16.8267V10.8267"
+      stroke="#6C7275"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14.5 16.8267V10.8267"
+      stroke="#6C7275"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const CouponIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 8L9 14"
+      stroke="#121212"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M15 14H14.991M9.00897 8H9"
+      stroke="#121212"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M20 21.5V4C20 2.89543 19.1046 2 18 2H6C4.89543 2 4 2.89543 4 4V21.5L8 19.5L12 22L16 19.5L20 21.5Z"
+      stroke="#121212"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const CheckoutIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 16L16 12M16 12L12 8M16 12H8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+      stroke="#FCFCFD"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

@@ -93,7 +93,9 @@ const Header = () => {
           <NavLink to="/shop">
             <ShopIcon />
           </NavLink>
-          <CartIcon />
+          <NavLink to="/cart">
+            <CartIcon />
+          </NavLink>
           <NavLink to="/profile">
             <AccountIcon />
           </NavLink>
