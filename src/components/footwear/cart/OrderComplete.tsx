@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Naira } from "../../svgs/extras";
 
 const OrderComplete = () => {
@@ -70,9 +71,11 @@ const OrderComplete = () => {
         <button className="text-[#fff] bg-[#000] py-2 px-4 font-semibold text-[14px] rounded-lg">
           View transaction
         </button>
-        <button className="text-[#fff] bg-[#000] py-2 px-4 font-semibold text-[14px] rounded-lg">
-          Delivery progress
-        </button>
+        <NavLink to="/track-order">
+          <button className="text-[#fff] bg-[#000] py-2 px-4 font-semibold text-[14px] rounded-lg">
+            Delivery progress
+          </button>
+        </NavLink>
       </div>
     </div>
   );

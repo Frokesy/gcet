@@ -539,3 +539,138 @@ export const GreenTick = () => (
     />
   </svg>
 );
+
+export const WhiteTick = () => (
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_1090_18171)">
+      <rect width="32" height="32" rx="16" fill="#F9F5FF" />
+      <rect
+        x="1"
+        y="1"
+        width="30"
+        height="30"
+        rx="15"
+        stroke="#039855"
+        strokeWidth="2"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M22.7953 9.85334L13.2487 19.0667L10.7153 16.36C10.2487 15.92 9.51534 15.8933 8.982 16.2667C8.462 16.6533 8.31534 17.3333 8.63534 17.88L11.6353 22.76C11.9287 23.2133 12.4353 23.4933 13.0087 23.4933C13.5553 23.4933 14.0753 23.2133 14.3687 22.76C14.8487 22.1333 24.0087 11.2133 24.0087 11.2133C25.2087 9.98668 23.7553 8.90668 22.7953 9.84001V9.85334Z"
+        fill="#039855"
+      />
+    </g>
+    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#039855" />
+    <defs>
+      <clipPath id="clip0_1090_18171">
+        <rect width="32" height="32" rx="16" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const DeliveryInProgress = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_1090_18189)">
+      <g clipPath="url(#clip0_1090_18189)">
+        <rect x="4" y="4" width="32" height="32" rx="16" fill="#F9F5FF" />
+        <rect x="5" y="5" width="30" height="30" rx="15" fill="#F9F5FF" />
+        <rect
+          x="5"
+          y="5"
+          width="30"
+          height="30"
+          rx="15"
+          stroke="#039855"
+          strokeWidth="2"
+        />
+        <circle cx="20" cy="20" r="5" fill="#039855" />
+      </g>
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_1090_18189"
+        x="0"
+        y="0"
+        width="40"
+        height="40"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feMorphology
+          radius="4"
+          operator="dilate"
+          in="SourceAlpha"
+          result="effect1_dropShadow_1090_18189"
+        />
+        <feOffset />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.956863 0 0 0 0 0.921569 0 0 0 0 1 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_1090_18189"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_1090_18189"
+          result="shape"
+        />
+      </filter>
+      <clipPath id="clip0_1090_18189">
+        <rect x="4" y="4" width="32" height="32" rx="16" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const DefaultDelivery = () => (
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_1090_18198)">
+      <rect width="32" height="32" rx="16" fill="white" />
+      <rect
+        x="1"
+        y="1"
+        width="30"
+        height="30"
+        rx="15"
+        stroke="#EAECF0"
+        strokeWidth="2"
+      />
+      <circle cx="16" cy="16" r="5" fill="#EAECF0" />
+    </g>
+    <defs>
+      <clipPath id="clip0_1090_18198">
+        <rect width="32" height="32" rx="16" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
