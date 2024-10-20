@@ -52,22 +52,22 @@ const Cart = () => {
           Your Cart
         </h2>
 
-        <div className="flex justify-between">
-          <div className="w-[60%]">
-            <div className="grid grid-cols-3 gap-6 mt-6">
-              <div className="flex items-center space-x-3 border-b-2 border-[#333] pb-3 font-semibold">
+        <div className="flex lg:flex-row flex-col justify-between">
+          <div className="lg:w-[60%]">
+            <div className="lg:grid grid-cols-3 flex overflow-x-auto gap-6 mt-6 px-6 lg:px-0">
+              <div className="flex items-center space-x-3 border-b-2 border-[#333] flex-shrink-0 w-[256px] pb-3 font-semibold">
                 <p className="w-[38px] h-[38px] bg-[#000] text-[#fff] flex justify-center items-center rounded-full">
                   1
                 </p>
                 <p>Cart</p>
               </div>
-              <div className="flex items-center space-x-3 pb-3 font-semibold">
+              <div className="flex items-center space-x-3 pb-3 font-semibold flex-shrink-0 w-[256px]">
                 <p className="w-[38px] h-[38px] bg-[#808080] text-[#fff] flex justify-center items-center rounded-full">
                   2
                 </p>
                 <p className="text-[#808080]">Checkout Details</p>
               </div>
-              <div className="flex items-center space-x-3 pb-3 font-semibold">
+              <div className="flex items-center space-x-3 pb-3 font-semibold flex-shrink-0 w-[256px]">
                 <p className="w-[38px] h-[38px] bg-[#808080] text-[#fff] flex justify-center items-center rounded-full">
                   3
                 </p>
@@ -78,31 +78,31 @@ const Cart = () => {
             <div className="flex flex-col space-y-10 mt-10">
               {items.map((item) => (
                 <div
-                  className="flex justify-between border-b-2 border-[#ccc] pb-4"
+                  className="flex justify-between border-b-2 border-[#ccc] pb-4 px-6"
                   key={item.id}
                 >
                   <div className="flex items-center space-x-6">
                     <img
                       src={item.productImg}
                       alt={item.name}
-                      className="w-[160px] h-[115px] object-cover"
+                      className="lg:w-[160px] w-[80px] lg:h-[115px] h-[57px] object-cover"
                     />
                     <div className="flex flex-col space-y-3">
-                      <h2>{item.name}</h2>
-                      <p>Color: white</p>
+                      <h2 className="lg:text-[16px] text-[12px]">{item.name}</h2>
+                      <p className="lg:text-[16px] text-[12px]">Color: white</p>
                       <div className="flex items-center space-x-4">
-                        <p className="w-[20px] h-[20px] rounded-full flex justify-center items-center bg-[#000] text-[#fff]">
+                        <p className="lg:w-[20px] lg:h-[20px] w-[15px] h-[15px] text-[14px] rounded-full flex justify-center items-center bg-[#000] text-[#fff]">
                           -
                         </p>
-                        <p>1</p>
-                        <p className="w-[20px] h-[20px] rounded-full flex justify-center items-center bg-[#000] text-[#fff]">
+                        <p className="lg:text-[16px] text-[12px]">1</p>
+                        <p className="lg:w-[20px] lg:h-[20px] w-[15px] h-[15px] text-[14px] rounded-full flex justify-center items-center bg-[#000] text-[#fff]">
                           +
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex flex-col justify-between items-end ">
+                  <div className="flex lg:flex-col flex-col-reverse justify-between items-end">
                     <Bin />
                     <p className="flex items-center font-semibold space-x-2 text-[14px]">
                       <Naira />
@@ -114,7 +114,7 @@ const Cart = () => {
             </div>
           </div>
 
-          <div className="w-[30%] border border-[#ccc] rounded-2xl p-3">
+          <div className="lg:w-[30%] border border-[#ccc] lg:rounded-2xl lg:p-3 p-6">
             <h2 className="text-[24px] font-semibold">Order Summary</h2>
 
             <div className="flex flex-col space-y-6 mt-6">
@@ -127,7 +127,7 @@ const Cart = () => {
               </div>
               <div className="flex justify-between p-3 rounded-lg border border-[#333]">
                 <div className="flex items-center space-x-3">
-                  <input type="radio" defaultChecked name="deliveryFee" id="" />
+                  <input type="radio" defaultChecked name="deliveryFee" id="deliveryFee" />
                   <h2>Subtotal</h2>
                 </div>
                 <p className="flex items-center font-semibold space-x-2 text-[14px]">
@@ -137,7 +137,7 @@ const Cart = () => {
               </div>
               <div className="flex justify-between p-3 rounded-lg border border-[#333]">
                 <div className="flex items-center space-x-3">
-                  <input type="radio" name="pickup" id="" />
+                  <input type="radio" name="pickup" id="pickup" />
                   <h2>Pickup</h2>
                 </div>
                 <p className="flex items-center font-semibold space-x-2 text-[14px]">
@@ -160,7 +160,7 @@ const Cart = () => {
                   <input
                     type="text"
                     placeholder="Add promo code"
-                    className="border-none outline-none bg-inherit"
+                    className="border-none outline-none bg-inherit w-[100%]"
                   />
                 </div>
                 <div className="cursor-pointer w-[30%] text-[14px] bg-[#000] text-center text-[#fff] p-2 rounded-lg">
@@ -168,7 +168,7 @@ const Cart = () => {
                 </div>
               </div>
 
-              <button className="py-6 w-[100%] bg-[#000] text-[#fff] space-x-3 flex items-center rounded-lg justify-center font-semibold">
+              <button className="lg:py-6 py-4 w-[100%] bg-[#000] text-[#fff] space-x-3 flex items-center rounded-lg justify-center font-semibold">
                 <p>Proceed to Checkout</p>
                 <CheckoutIcon />
               </button>
