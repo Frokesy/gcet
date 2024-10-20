@@ -183,15 +183,15 @@ const Product: FC<SingleProductProps> = ({ product }) => {
           <hr />
           <div className="flex justify-between lg:justify-normal space-x-8 mt-6">
             <div className="flex items-center space-x-2 underline">
-              <h2 className="text-[24px] font-semibold">All Reviews</h2>
+              <h2 className="text-[20px] font-semibold">All Reviews</h2>
               <p className="text-[#404040]">(451)</p>
             </div>
             <div className="lg:flex hidden items-center space-x-2">
-              <h2 className="text-[24px] font-semibold">High Reviews</h2>
+              <h2 className="text-[20px] font-semibold">High Reviews</h2>
               <p className="text-[#404040]">(400)</p>
             </div>
             <div className="lg:flex hidden items-center space-x-2">
-              <h2 className="text-[24px] font-semibold">Low Reviews</h2>
+              <h2 className="text-[20px] font-semibold">Low Reviews</h2>
               <p className="text-[#404040]">(51)</p>
             </div>
             <Menu />

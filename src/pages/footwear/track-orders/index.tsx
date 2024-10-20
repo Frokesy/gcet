@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Container from "../../../components/defaults/Container";
 import {
   BackIcon,
@@ -12,10 +13,10 @@ const TrackOrder = () => {
     <Container>
       <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
         <div className="flex space-x-6 w-[90vw] mx-auto">
-          <div className="flex items-center cursor-pointer space-x-2">
+          <NavLink to="/" className="flex items-center cursor-pointer space-x-2">
             <BackIcon />
             <p className="uppercase">Back</p>
-          </div>
+          </NavLink>
           <div className="flex space-x-1 lg:text-[14px] text-[12px]">
             <p className="underline">Home</p>
             <p>/</p>

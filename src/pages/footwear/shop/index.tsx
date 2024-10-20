@@ -11,6 +11,7 @@ import ShopCatalog, {
   ProductProps,
 } from "../../../components/footwear/ShopCatalog";
 import Product from "../../../components/footwear/Product";
+import { NavLink } from "react-router-dom";
 
 const Shop = () => {
   const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
@@ -25,26 +26,33 @@ const Shop = () => {
     <Container>
       <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
         <div className="flex space-x-6 w-[90vw] mx-auto">
-          <div
-            onClick={() => setProduct(undefined)}
-            className="flex items-center cursor-pointer space-x-2"
-          >
-            <BackIcon />
-            <p className="uppercase">Back</p>
-          </div>
+          {product !== undefined ? (
+            <div
+              onClick={() => setProduct(undefined)}
+              className="flex items-center cursor-pointer space-x-2"
+            >
+              <BackIcon />
+              <p className="uppercase">Back</p>
+            </div>
+          ) : (
+            <NavLink
+              to="/"
+              className="flex items-center cursor-pointer space-x-2"
+            >
+              <BackIcon />
+              <p className="uppercase">Back</p>
+            </NavLink>
+          )}
+
           <div className="flex space-x-1 lg:text-[14px] text-[12px]">
             <p className="underline">Home</p>
             <p>/</p>
             <p className="underline">Men</p>
-            {product?.category && (
-              <p className="underline">/</p>
-            )}
+            {product?.category && <p className="underline">/</p>}
             {product?.category && (
               <p className="underline capitalize">{product.category}</p>
             )}
-            {product?.category && (
-              <p className="underline">/</p>
-            )}
+            {product?.category && <p className="underline">/</p>}
             {product?.name && (
               <p className="underline">{product.name.slice(0, 10)}...</p>
             )}

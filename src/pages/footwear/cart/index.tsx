@@ -6,6 +6,7 @@ import { BackIcon, GreenTick } from "../../../components/svgs/extras";
 import CheckoutDetails from "../../../components/footwear/cart/CheckoutDetails";
 import OrderSummaryTwo from "../../../components/footwear/cart/OrderSummaryTwo";
 import OrderComplete from "../../../components/footwear/cart/OrderComplete";
+import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const [activeTab, setActiveTab] = useState<string>("cart");
@@ -14,10 +15,13 @@ const Cart = () => {
     <Container>
       <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
         <div className="flex space-x-6 w-[90vw] mx-auto">
-          <div className="flex items-center cursor-pointer space-x-2">
+          <NavLink
+            to="/"
+            className="flex items-center cursor-pointer space-x-2"
+          >
             <BackIcon />
             <p className="uppercase">Back</p>
-          </div>
+          </NavLink>
           <div className="flex space-x-1 lg:text-[14px] text-[12px]">
             <p className="underline">Home</p>
             <p>/</p>
@@ -81,9 +85,7 @@ const Cart = () => {
                   </p>
                 )}
                 <p
-                  className={`${
-                    activeTab === "checkout" && "text-[#000]"
-                  } ${
+                  className={`${activeTab === "checkout" && "text-[#000]"} ${
                     activeTab === "order-complete" &&
                     "text-[#000] font-semibold"
                   } text-[#808080]`}
