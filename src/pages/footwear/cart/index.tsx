@@ -5,6 +5,7 @@ import ShoppingCart from "../../../components/footwear/cart/ShoppingCart";
 import { BackIcon } from "../../../components/svgs/extras";
 import CheckoutDetails from "../../../components/footwear/cart/CheckoutDetails";
 import OrderSummaryTwo from "../../../components/footwear/cart/OrderSummaryTwo";
+import OrderComplete from "../../../components/footwear/cart/OrderComplete";
 
 const Cart = () => {
   const [activeTab, setActiveTab] = useState<string>("cart");
@@ -21,14 +22,20 @@ const Cart = () => {
             <p className="underline">Home</p>
             <p>/</p>
             <p className="underline">Cart</p>
+            {activeTab !== "cart" && <p>/</p>}
+            {activeTab !== "cart" && <p className="underline">Checkout</p>}
           </div>
         </div>
         <h2 className="lg:text-[40px] text-[30px] font-semibold px-6 lg:px-0 uppercase mt-10">
-          Your Cart
+          {activeTab === "order-complete" ? "Order" : "Your Cart"}
         </h2>
 
-        <div className="flex lg:flex-row flex-col justify-between">
-          <div className="lg:w-[60%]">
+        <div
+          className={` flex lg:flex-row flex-col ${
+            activeTab !== "order-complete" && "justify-between"
+          }`}
+        >
+          <div className={`${activeTab !== "order-complete" ? "lg:w-[60%]" : "lg:w-[100%] lg:mx-auto"}`}>
             <div className="lg:grid grid-cols-3 flex overflow-x-auto gap-6 mt-6 px-6 lg:px-0">
               <div
                 onClick={() => setActiveTab("cart")}
@@ -61,6 +68,7 @@ const Cart = () => {
 
             {activeTab === "cart" && <ShoppingCart />}
             {activeTab === "checkout" && <CheckoutDetails />}
+            {activeTab === "order-complete" && <OrderComplete />}
           </div>
 
           {activeTab === "cart" && <OrderSummaryOne />}
