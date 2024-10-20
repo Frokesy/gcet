@@ -2,7 +2,7 @@ import { CreditCardIcon } from "../../svgs/extras";
 
 const CheckoutDetails = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 px-6 lg:px-0">
       <h2 className="text-[24px] font-semibold">Checkout Details</h2>
 
       <div className="mt-10 flex flex-col space-y-6">

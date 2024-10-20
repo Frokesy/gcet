@@ -28,7 +28,7 @@ const OrderSummaryTwo = () => {
     },
   ];
   return (
-    <div className="lg:w-[30%] border border-[#ccc] lg:rounded-2xl bg-[#f9fafb] p-6">
+    <div className="lg:w-[30%] w-[90%] mx-auto lg:mx-0 mt-10 border border-[#ccc] rounded-2xl bg-[#f9fafb] p-6">
       <h2 className="text-[24px] font-semibold">Order Summary</h2>
 
       <div className="flex flex-col space-y-10 mt-10">
