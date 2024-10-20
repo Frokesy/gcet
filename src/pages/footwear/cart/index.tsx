@@ -2,7 +2,7 @@ import { useState } from "react";
 import Container from "../../../components/defaults/Container";
 import OrderSummaryOne from "../../../components/footwear/cart/OrderSummaryOne";
 import ShoppingCart from "../../../components/footwear/cart/ShoppingCart";
-import { BackIcon } from "../../../components/svgs/extras";
+import { BackIcon, GreenTick } from "../../../components/svgs/extras";
 import CheckoutDetails from "../../../components/footwear/cart/CheckoutDetails";
 import OrderSummaryTwo from "../../../components/footwear/cart/OrderSummaryTwo";
 import OrderComplete from "../../../components/footwear/cart/OrderComplete";
@@ -35,25 +35,61 @@ const Cart = () => {
             activeTab !== "order-complete" && "justify-between"
           }`}
         >
-          <div className={`${activeTab !== "order-complete" ? "lg:w-[60%]" : "lg:w-[100%] lg:mx-auto"}`}>
+          <div
+            className={`${
+              activeTab !== "order-complete"
+                ? "lg:w-[60%]"
+                : "lg:w-[100%] lg:mx-auto"
+            }`}
+          >
             <div className="lg:grid grid-cols-3 flex overflow-x-auto gap-6 mt-6 px-6 lg:px-0">
               <div
                 onClick={() => setActiveTab("cart")}
-                className="flex items-center space-x-3 border-b-2 border-[#333] cursor-pointer flex-shrink-0 w-[256px] pb-3 font-semibold"
+                className={`flex items-center space-x-3 ${
+                  activeTab !== "cart"
+                    ? "border-b-4 border-[#039855]"
+                    : "border-b-2 border-[#333]"
+                } cursor-pointer flex-shrink-0 w-[256px] pb-3 font-semibold`}
               >
-                <p className="w-[38px] h-[38px] bg-[#000] text-[#fff] flex justify-center items-center rounded-full">
-                  1
-                </p>
-                <p>Cart</p>
+                {activeTab !== "cart" ? (
+                  <GreenTick />
+                ) : (
+                  <p className="w-[35px] h-[35px] bg-[#000] text-[#fff] flex justify-center items-center rounded-full">
+                    1
+                  </p>
+                )}
+                <p>Shopping Cart</p>
               </div>
               <div
                 onClick={() => setActiveTab("checkout")}
-                className="flex items-center space-x-3 pb-3 font-semibold cursor-pointer flex-shrink-0 w-[256px]"
+                className={`flex items-center space-x-3 ${
+                  activeTab === "checkout" && "border-b-2 border-[#333]"
+                } ${
+                  activeTab === "order-complete" &&
+                  "border-b-4 border-[#039855]"
+                } cursor-pointer flex-shrink-0 w-[256px] pb-3 font-semibold`}
               >
-                <p className="w-[38px] h-[38px] bg-[#808080] text-[#fff] flex justify-center items-center rounded-full">
-                  2
+                {activeTab === "order-complete" ? (
+                  <GreenTick />
+                ) : (
+                  <p
+                    className={`w-[38px] h-[38px] ${
+                      activeTab === "checkout" ? "bg-[#000]" : "bg-[#808080]"
+                    } text-[#fff] flex justify-center items-center rounded-full`}
+                  >
+                    2
+                  </p>
+                )}
+                <p
+                  className={`${
+                    activeTab === "checkout" && "text-[#000]"
+                  } ${
+                    activeTab === "order-complete" &&
+                    "text-[#000] font-semibold"
+                  } text-[#808080]`}
+                >
+                  Checkout Details
                 </p>
-                <p className="text-[#808080]">Checkout Details</p>
               </div>
               <div
                 onClick={() => setActiveTab("order-complete")}
