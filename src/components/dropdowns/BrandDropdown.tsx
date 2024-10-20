@@ -1,4 +1,4 @@
-import { Adidas, DrMartens, Hermes, NewBalance, Nike, Puma, Reebok } from "../../svgs/brandIcons";
+import { Adidas, DrMartens, Hermes, NewBalance, Nike, Puma, Reebok } from "../svgs/brandIcons";
 
 const BrandDropdown = () => {
   return (

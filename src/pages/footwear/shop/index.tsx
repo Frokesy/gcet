@@ -6,7 +6,7 @@ import {
   BackIcon,
   FilterIcon,
 } from "../../../components/svgs/extras";
-import { SearchIcon } from "../../../components/svgs/HeaderIcons";
+import { SearchIcon } from "../../../components/svgs/headerIcons";
 import ShopCatalog, {
   ProductProps,
 } from "../../../components/footwear/ShopCatalog";

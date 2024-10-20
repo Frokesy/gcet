@@ -4,9 +4,9 @@ const HomeDropdown = () => {
   return (
     <div className="bg-[#fff] shadow-xl left-[9vw] py-4 pl-3 pr-6 fixed">
       <div className="">
-        <div className="space-y-6 text-[16px]">
+        <div className="space-y-6 text-[16px] flex flex-col">
           <NavLink to="/">Home Page 1</NavLink>
-          <p>Home Page 2</p>
+          <NavLink to="/tmp-2/home">Home Page 2</NavLink>
           <p>Home Page 3</p>
           <p>Home Page 4</p>
           <p>Home Page 5</p>

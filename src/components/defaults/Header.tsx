@@ -6,10 +6,10 @@ import {
   MobileHamburger,
   SearchIcon,
   ShopIcon,
-} from "../svgs/HeaderIcons";
-import CategoriesDropdown from "../footwear/dropdowns/CategoriesDropdown";
-import BrandDropdown from "../footwear/dropdowns/BrandDropdown";
-import HomeDropdown from "../footwear/dropdowns/HomeDropdown";
+} from "../svgs/headerIcons";
+import CategoriesDropdown from "../dropdowns/CategoriesDropdown";
+import BrandDropdown from "../dropdowns/BrandDropdown";
+import HomeDropdown from "../dropdowns/HomeDropdown";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
