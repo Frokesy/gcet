@@ -15,7 +15,7 @@ const Brands = () => {
         Available brands
       </h2>
 
-      <div className="w-[90vw] mx-auto grid grid-cols-2 gap-10 lg:gap-0 place-items-center lg:flex lg:flex-row lg:justify-between justify-center items-center pt-10 pb-10">
+      <div className="w-[90vw] mx-auto grid grid-cols-2 gap-10 lg:gap-0 place-items-center lg:flex lg:flex-row lg:justify-between justify-center items-center pt-10">
         {" "}
         <LuisVuitton />
         <TagHeuer />
