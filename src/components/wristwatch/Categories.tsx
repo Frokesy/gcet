@@ -17,7 +17,7 @@ const WatchCategories = () => {
           <h2 className="font-sans text-[24px] font-semibold">
             Luxury Watches
           </h2>
-          <button className="flex items-center bg-[#ff4405] font-semibold py-2 px-3 lg:text-[18px] text-[14px] rounded-xl text-[#fff] space-x-3">
+          <button className="flex items-center font-sans bg-[#ff4405] font-semibold py-2 px-3 text-[14px] rounded-xl text-[#fff] space-x-3">
             <span>Shop Category</span> <CaretRight />
           </button>
         </div>
@@ -29,7 +29,7 @@ const WatchCategories = () => {
                 Sports Watches
               </h2>
               <div className="">
-                <button className="flex items-center bg-[#ff4405] font-semibold py-2 px-3 lg:text-[18px] text-[14px] rounded-xl text-[#fff] space-x-3">
+                <button className="flex items-center font-sans bg-[#ff4405] font-semibold py-2 px-3 text-[14px] rounded-xl text-[#fff] space-x-3">
                   <span>Shop Category</span> <CaretRight />
                 </button>
               </div>
@@ -46,7 +46,7 @@ const WatchCategories = () => {
                 Sports Watches
               </h2>
               <div className="">
-                <button className="flex items-center bg-[#ff4405] font-semibold py-2 px-3 lg:text-[18px] text-[14px] rounded-xl text-[#fff] space-x-3">
+                <button className="flex items-center font-sans bg-[#ff4405] font-semibold py-2 px-3 text-[14px] rounded-xl text-[#fff] space-x-3">
                   <span>Shop Category</span> <CaretRight />
                 </button>
               </div>
