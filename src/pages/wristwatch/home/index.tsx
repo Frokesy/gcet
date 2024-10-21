@@ -1,5 +1,6 @@
 import Container from "../../../components/defaults/Container";
 import Brands from "../../../components/wristwatch/Brands";
+import WatchCategories from "../../../components/wristwatch/Categories";
 import Hero from "../../../components/wristwatch/Hero";
 import Trending from "../../../components/wristwatch/Trending";
 
@@ -10,6 +11,7 @@ const WristwatchHome = () => {
         <Hero />
         <Brands />
         <Trending />
+        <WatchCategories />
       </div>
     </Container>
   );
