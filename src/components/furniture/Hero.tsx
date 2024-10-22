@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="bg-[#63ead1] pt-[20vh]">
+    <div className="bg-gradient-to-b from-[#63ead1] to-[#fff] pt-[20vh]">
       <div className="w-[90vw] bg-[#1ebda4] mx-auto relative lg:pt-[15vh]">
         <div className="lg:absolute flex flex-col items-center justify-center pb-20 lg:pb-0 w-[100%] lg:-mt-6">
           <h2 className="lg:text-[24px] font-bold text-center pt-[15vh]">
