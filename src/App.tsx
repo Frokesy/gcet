@@ -6,6 +6,7 @@ import Shop from "./pages/footwear/shop";
 import Cart from "./pages/footwear/cart";
 import TrackOrder from "./pages/footwear/track-orders";
 import WristwatchHome from "./pages/wristwatch/home";
+import FurnitureHome from "./pages/furniture/home";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -15,7 +16,8 @@ const App = () => {
     { path: "/shop", element: <Shop /> },
     { path: "/cart", element: <Cart /> },
     { path: "/track-order", element: <TrackOrder /> },
-    { path: "/tmp-2/home", element: <WristwatchHome /> }
+    { path: "/tmp-2/home", element: <WristwatchHome /> },
+    { path: "/tmp-3/home", element: <FurnitureHome /> }
   ]);
   return <RouterProvider router={router} />;
 };

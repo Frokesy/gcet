@@ -7,7 +7,7 @@ const HomeDropdown = () => {
         <div className="space-y-6 text-[16px] flex flex-col">
           <NavLink to="/">Home Page 1</NavLink>
           <NavLink to="/tmp-2/home">Home Page 2</NavLink>
-          <p>Home Page 3</p>
+          <NavLink to="/tmp-3/home">Home Page 3</NavLink>
           <p>Home Page 4</p>
           <p>Home Page 5</p>
           <p>Home Page 6</p>
