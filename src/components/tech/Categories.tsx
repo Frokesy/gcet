@@ -31,9 +31,9 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="my-10 flex lg:flex-row flex-col justify-between lg:space-x-6">
+        <div className="my-10 flex lg:flex-row flex-col lg:text-[24px] text-[14px] justify-between lg:space-x-6">
           <div className="lg:w-[50%] space-y-6">
-            <div className="lg:py-16 py-12 lg:px-10 px-4 bg-[#fff] text-[#000] lg:rounded-xl rounded-lg flex items-center lg:space-x-10 lg:justify-normal justify-between">
+            <div className="lg:py-16 py-12 lg:px-10 px-4 bg-[#fff] text-[#000] lg:rounded-xl rounded-lg flex items-center lg:space-x-10 justify-between">
               <img
                 src="/assets/tech/th-two.png"
                 alt="img"
@@ -48,7 +48,7 @@ const Categories = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:py-8 py-6 lg:px-10 px-4 bg-[#fff] text-[#000] lg:rounded-xl rounded-lg flex items-center lg:space-x-10 lg:justify-normal justify-between">
+            <div className="lg:py-8 py-6 lg:px-10 px-4 bg-[#fff] text-[#000] lg:rounded-xl rounded-lg flex items-center lg:space-x-10  justify-between">
               <img
                 src="/assets/tech/th-six.png"
                 alt="img"
