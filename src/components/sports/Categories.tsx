@@ -7,7 +7,7 @@ const Categories = () => {
     { id: 5, name: "Boxing", img: "/assets/sports/st-eight.png" },
   ];
   return (
-    <div className="w-[90vw] mx-auto pt-[10vh]">
+    <div className="w-[90vw] mx-auto py-[10vh]">
       <h2 className="lg:text-[48px] text-[32px] font-semibold text-center text-[#194185]">
         Shop by Categories
       </h2>
