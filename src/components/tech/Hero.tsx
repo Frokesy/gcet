@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="pt-[10vh] relative lg:bg-[url('/assets/tech/th-one.png')] bg-no-repeat min-h-screen w-screen">
+    <div className="pt-[10vh] relative lg:bg-[url('/assets/tech/th-one.png')] bg-no-repeat lg:min-h-screen w-[100%] pb-10 lg:pb-0">
       <div className="w-[90vw] mx-auto lg:hidden">
         <img src="/assets/tech/th-one.png" alt="img" />
       </div>
