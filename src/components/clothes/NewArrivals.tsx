@@ -1,21 +1,22 @@
+import Five from "../stars/Five";
 import FourandHalf from "../stars/FourandHalf";
 import ThreeandHalf from "../stars/ThreeandHalf";
 import { Naira } from "../svgs/extras";
 
-const MiniGallery = () => {
+const NewArrivals = () => {
   const items = [
     {
       id: 1,
-      productImg: "/assets/footwear/ft-two.png",
-      name: "Nike Zoom",
-      rating: 4.5,
-      ratingIcon: <FourandHalf />,
+      productImg: "/assets/clothes/cl-four.png",
+      name: "T-shirt with Tape Details",
+      rating: 5,
+      ratingIcon: <Five />,
       price: "200,000.00",
     },
     {
       id: 2,
-      productImg: "/assets/footwear/ft-three.png",
-      name: "Dr Martens",
+      productImg: "/assets/clothes/cl-five.png",
+      name: "Skinny Fit Jeans",
       rating: 3.5,
       ratingIcon: <ThreeandHalf />,
       price: "200,000.00",
@@ -23,28 +24,27 @@ const MiniGallery = () => {
     },
     {
       id: 3,
-      productImg: "/assets/footwear/ft-four.png",
-      name: "London Loafers",
+      productImg: "/assets/clothes/cl-six.png",
+      name: "Checkered Shirt",
       rating: 4.5,
       ratingIcon: <FourandHalf />,
       price: "200,000.00",
     },
     {
       id: 4,
-      productImg: "/assets/footwear/ft-five.png",
-      name: "Nike Air max 0s",
+      productImg: "/assets/clothes/cl-seven.png",
+      name: "Sleeve Striped T-shirt",
       rating: 4.5,
       ratingIcon: <FourandHalf />,
       price: "200,000.00",
     },
   ];
   return (
-    <div className="pt-[5vh] pb-[15vh]">
-      <div className="lg:bg-[#000] lg:text-[#fff] w-[100%] py-2">
-        <h2 className="lg:text-[48px] text-[32px] font-bold uppercase text-center">
-          Fresh Footwears
-        </h2>
-      </div>
+    <div className="py-[10vh] bg-[#f7f7f7]">
+      <h2 className="lg:text-[48px] text-[32px] uppercase font-semibold text-center">
+        New Arrivals
+      </h2>
+
       <div className="w-[90vw] flex overflow-x-auto mx-auto justify-between py-[10vh] space-x-4">
         {items.map((item) => (
           <div
@@ -61,7 +61,6 @@ const MiniGallery = () => {
               {item.ratingIcon}
               <p>{item.rating}/5</p>
             </div>
-
             <div className="flex items-center space-x-10">
               <p className="flex items-center text-[20px] font-semibold">
                 <Naira /> {item.price}
@@ -77,7 +76,7 @@ const MiniGallery = () => {
       </div>
 
       <div className="flex justify-center">
-        <button className="bg-[#000] lg:w-[15%] w-[50%] text-[#fff] lg:mt-6 mt-8 py-2 rounded-lg">
+        <button className="bg-[#553a32] font-semibold lg:w-[15%] w-[50%] text-[#fff] lg:mt-6 mt-8 py-2 rounded-lg">
           View all
         </button>
       </div>
@@ -85,4 +84,4 @@ const MiniGallery = () => {
   );
 };
 
-export default MiniGallery;
+export default NewArrivals;
