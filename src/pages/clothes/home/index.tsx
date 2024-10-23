@@ -1,4 +1,5 @@
 import Brands from "../../../components/clothes/Brands"
+import Categories from "../../../components/clothes/Categories"
 import Hero from "../../../components/clothes/Hero"
 import NewArrivals from "../../../components/clothes/NewArrivals"
 import TopSelling from "../../../components/clothes/TopSelling"
@@ -11,6 +12,7 @@ const ClothesHome = () => {
         <Brands />
         <NewArrivals />
         <TopSelling />
+        <Categories />
     </Container>
   )
 }
