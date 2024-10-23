@@ -35,7 +35,7 @@ const BestSellers = () => {
   return (
     <div>
       <hr className="w-[60vw] mx-auto" />
-      <div className="pt-[15vh] w-[90vw] mx-auto">
+      <div className="lg:pt-[15vh] pt-14 w-[90vw] mx-auto">
         <h2 className="lg:text-[48px] text-[32px] text-[#194185]">
           Best Sellers
         </h2>
