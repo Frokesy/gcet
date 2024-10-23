@@ -9,6 +9,7 @@ import WristwatchHome from "./pages/wristwatch/home";
 import FurnitureHome from "./pages/furniture/home";
 import ClothesHome from "./pages/clothes/home";
 import TechHome from "./pages/tech/home";
+import SportsHome from "./pages/sports/home";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -22,6 +23,7 @@ const App = () => {
     { path: "/tmp-3/home", element: <FurnitureHome /> },
     { path: "/tmp-4/home", element: <ClothesHome /> },
     { path: "/tmp-5/home", element: <TechHome /> },
+    { path: "/tmp-6/home", element: <SportsHome /> },
   ]);
   return <RouterProvider router={router} />;
 };

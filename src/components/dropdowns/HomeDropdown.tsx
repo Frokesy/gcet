@@ -10,7 +10,7 @@ const HomeDropdown = () => {
           <NavLink to="/tmp-3/home">Home Page 3</NavLink>
           <NavLink to="/tmp-4/home">Home Page 4</NavLink>
           <NavLink to="/tmp-5/home">Home Page 5</NavLink>
-          <p>Home Page 6</p>
+          <NavLink to="/tmp-6/home">Home Page 6</NavLink>
         </div>
       </div>
     </div>
