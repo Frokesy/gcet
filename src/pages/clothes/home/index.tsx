@@ -1,6 +1,7 @@
 import Brands from "../../../components/clothes/Brands"
 import Hero from "../../../components/clothes/Hero"
 import NewArrivals from "../../../components/clothes/NewArrivals"
+import TopSelling from "../../../components/clothes/TopSelling"
 import Container from "../../../components/defaults/Container"
 
 const ClothesHome = () => {
@@ -9,6 +10,7 @@ const ClothesHome = () => {
         <Hero />
         <Brands />
         <NewArrivals />
+        <TopSelling />
     </Container>
   )
 }
