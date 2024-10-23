@@ -3,6 +3,7 @@ import Brands from "../../../components/tech/Brands"
 import Categories from "../../../components/tech/Categories"
 import Hero from "../../../components/tech/Hero"
 import NewArrivals from "../../../components/tech/NewArrivals"
+import Promotions from "../../../components/tech/Promotions"
 import TopSeller from "../../../components/tech/TopSeller"
 
 const TechHome = () => {
@@ -13,6 +14,7 @@ const TechHome = () => {
         <NewArrivals />
         <Categories />
         <TopSeller />
+        <Promotions />
     </Container>
   )
 }
