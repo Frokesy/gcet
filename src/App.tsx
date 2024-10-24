@@ -22,6 +22,7 @@ import SportsShop from "./pages/sports/shop";
 import FootwearCart from "./pages/footwear/cart";
 import WristwatchCart from "./pages/wristwatch/cart";
 import TechCart from "./pages/tech/cart";
+import ClothesCart from "./pages/clothes/cart";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -48,6 +49,7 @@ const App = () => {
     { path: "/tmp-4/home", element: <ClothesHome /> },
     { path: "/tmp-4/contact", element: <ClothesContact /> },
     { path: "/tmp-4/shop", element: <ClothesShop /> },
+    { path: "/tmp-4/cart", element: <ClothesCart /> },
 
     //tech template routes
     { path: "/tmp-5/home", element: <TechHome /> },
