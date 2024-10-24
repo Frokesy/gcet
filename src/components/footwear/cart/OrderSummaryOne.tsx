@@ -1,6 +1,11 @@
+import { FC } from "react";
 import { CheckoutIcon, CouponIcon, Naira } from "../../svgs/extras";
 
-const OrderSummaryOne = () => {
+interface SummaryProps {
+  themeColor: string;
+}
+
+const OrderSummaryOne: FC<SummaryProps> = ({ themeColor }) => {
   return (
     <div className="lg:w-[30%] border border-[#ccc] lg:rounded-2xl p-6">
       <h2 className="text-[24px] font-semibold">Order Summary</h2>
@@ -56,12 +61,12 @@ const OrderSummaryOne = () => {
               className="border-none outline-none bg-inherit w-[100%]"
             />
           </div>
-          <div className="cursor-pointer w-[30%] text-[14px] bg-[#000] text-center text-[#fff] p-2 rounded-lg">
+          <div className={`cursor-pointer w-[30%] text-[14px] bg-[${themeColor}] text-center text-[#fff] p-2 rounded-lg`}>
             Apply Coupon
           </div>
         </div>
 
-        <button className="lg:py-6 py-4 w-[100%] bg-[#000] text-[#fff] space-x-3 flex items-center rounded-lg justify-center font-semibold">
+        <button className={`lg:py-6 py-4 w-[100%] bg-[${themeColor}] text-[#fff] space-x-3 flex items-center rounded-lg justify-center font-semibold`}>
           <p>Proceed to Checkout</p>
           <CheckoutIcon />
         </button>

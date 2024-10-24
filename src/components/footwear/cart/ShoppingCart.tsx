@@ -1,32 +1,13 @@
+import { FC } from "react";
+import { ItemProps } from "../../../pages/footwear/cart";
 import { Bin, Naira } from "../../svgs/extras";
 
-const ShoppingCart = () => {
-  const items = [
-    {
-      id: 1,
-      productImg: "/assets/footwear/ft-two.png",
-      name: "Nike Zoom",
-      price: "200,000.00",
-    },
-    {
-      id: 2,
-      productImg: "/assets/footwear/ft-three.png",
-      name: "Dr Martens",
-      price: "200,000.00",
-    },
-    {
-      id: 3,
-      productImg: "/assets/footwear/ft-four.png",
-      name: "London Loafers",
-      price: "200,000.00",
-    },
-    {
-      id: 4,
-      productImg: "/assets/footwear/ft-five.png",
-      name: "Nike Air max 0s",
-      price: "200,000.00",
-    },
-  ];
+interface ShoppingCartProps {
+  items: ItemProps[];
+}
+
+const ShoppingCart: FC<ShoppingCartProps> = ({ items }) => {
+  
   return (
     <div className="flex flex-col space-y-10 mt-10">
       {items.map((item) => (

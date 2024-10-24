@@ -1,25 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { Naira } from "../../svgs/extras";
+import { ItemProps } from "../../../pages/footwear/cart";
+import { FC } from "react";
 
-const OrderComplete = () => {
-  const items = [
-    {
-      id: 1,
-      productImg: "/assets/footwear/ft-two.png",
-    },
-    {
-      id: 2,
-      productImg: "/assets/footwear/ft-three.png",
-    },
-    {
-      id: 3,
-      productImg: "/assets/footwear/ft-four.png",
-    },
-    {
-      id: 4,
-      productImg: "/assets/footwear/ft-five.png",
-    },
-  ];
+interface OrderCompleteProps {
+  items: ItemProps[];
+}
+
+const OrderComplete: FC<OrderCompleteProps> = ({ items }) => {
+  
   return (
     <div className="lg:w-[50%] w-[90%] mx-auto border border-[#ccc] rounded-xl mt-20 bg-[#fff] shadow-xl text-center flex flex-col items-center justify-center py-10">
       <h2 className="text-[#808080]">Thank You!</h2>
