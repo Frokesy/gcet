@@ -85,6 +85,9 @@ const Header: FC<HeaderProps> = ({ active }) => {
             {active === "wristwatch" && (
               <NavLink to="/tmp-2/contact">Contact us</NavLink>
             )}
+            {active === "furniture" && (
+              <NavLink to="/tmp-3/contact">Contact us</NavLink>
+            )}
             {active === "clothes" && (
               <NavLink to="/tmp-4/contact">Contact us</NavLink>
             )}

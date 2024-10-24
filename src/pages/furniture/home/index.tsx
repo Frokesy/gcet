@@ -7,7 +7,7 @@ import TopSelling from "../../../components/furniture/TopSelling"
 
 const FurnitureHome = () => {
   return (
-    <Container>
+    <Container active="furniture">
         <Hero />
         <Categories />
         <NewArrivals />
