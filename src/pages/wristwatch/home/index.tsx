@@ -8,7 +8,7 @@ import Trending from "../../../components/wristwatch/Trending";
 
 const WristwatchHome = () => {
   return (
-    <Container>
+    <Container active="wristwatch">
       <div className="font-playfair">
         <Hero />
         <Brands />
