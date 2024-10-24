@@ -8,28 +8,28 @@ export interface ItemProps {
   price: string;
 }
 
-const WristwatchCart = () => {
+const TechCart = () => {
 
   const items: ItemProps[] = [
     {
         id: 19,
-        productImg: "/assets/wristwatch/wt-twenty-two.png",
-        name: "Richard Mille E4",
+        productImg: "/assets/tech/th-nine.png",
+        name: "Skullcandy - Crusher anc 2 wireless headphones",
         price: "200,000.00",
       },
       {
         id: 20,
-        productImg: "/assets/wristwatch/wt-one.png",
-        name: "Richard Mille E4",
+        productImg: "/assets/tech/th-ten.png",
+        name: "Skullcandy - Crusher anc 2 wireless headphones",
         price: "200,000.00",
       },
   ];
 
   return (
-    <Container active="wristwatch">
-      <CartTemplate items={items} themeColor="#ff4405" active="wristwatch" />
+    <Container active="tech">
+      <CartTemplate items={items} themeColor="#3e4784" active="tech" />
     </Container>
   );
 };
 
-export default WristwatchCart;
+export default TechCart;
