@@ -18,6 +18,7 @@ import FootwearShop from "./pages/footwear/shop";
 import WristwatchShop from "./pages/wristwatch/shop";
 import FurnitureShop from "./pages/furniture/shop";
 import ClothesShop from "./pages/clothes/shop";
+import TechShop from "./pages/tech/shop";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -47,6 +48,7 @@ const App = () => {
     //tech template routes
     { path: "/tmp-5/home", element: <TechHome /> },
     { path: "/tmp-5/contact", element: <TechContact /> },
+    { path: "/tmp-5/shop", element: <TechShop /> },
 
     //sports template routes
     { path: "/tmp-6/home", element: <SportsHome /> },

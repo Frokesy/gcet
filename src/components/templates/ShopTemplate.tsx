@@ -73,6 +73,15 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
                 <p className="uppercase">Back</p>
               </NavLink>
             )}
+            {active === "tech" && (
+              <NavLink
+                to="/tmp-5/home"
+                className="flex items-center cursor-pointer space-x-2"
+              >
+                <BackIcon />
+                <p className="uppercase">Back</p>
+              </NavLink>
+            )}
           </div>
         )}
 
@@ -123,7 +132,7 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
                   <img
                     src="/assets/wristwatch/cover.png"
                     alt="shop-img"
-                    className="w-[100%]"
+                    className="w-[100%] lg:h-[470px] object-cover"
                   />
                 </div>
               )}
@@ -132,7 +141,7 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
                   <img
                     src="/assets/furniture/cover.png"
                     alt="shop-img"
-                    className="w-[100%]"
+                    className="w-[100%] lg:h-[470px] object-cover"
                   />
                 </div>
               )}
@@ -141,7 +150,16 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
                   <img
                     src="/assets/clothes/cover.png"
                     alt="shop-img"
-                    className="w-[100%]"
+                    className="w-[100%] lg:h-[470px] object-cover"
+                  />
+                </div>
+              )}
+              {active === "tech" && (
+                <div className="w-[100%] mt-10">
+                  <img
+                    src="/assets/tech/th-one.png"
+                    alt="shop-img"
+                    className="w-[100%] lg:h-[470px] object-cover"
                   />
                 </div>
               )}
