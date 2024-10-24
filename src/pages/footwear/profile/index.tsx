@@ -7,7 +7,7 @@ import {
 
 const AccountProfile = () => {
   return (
-    <Container>
+    <Container active="footwear">
       <div className="pt-[15vh] pb-10 w-[90vw] mx-auto">
         <h2 className="text-[30px] font-semibold">Profile Settings</h2>
         <div className="flex justify-between mt-10">

@@ -7,7 +7,7 @@ import Reviews from "../../../components/footwear/Reviews";
 
 const FootwearHome = () => {
   return (
-    <Container>
+    <Container active="footwear">
       <Hero />
       <MiniGallery />
       <Categories />

@@ -4,12 +4,13 @@ import Footer from "../footwear/Footer";
 
 interface ContainerProps {
     children: ReactNode;
+    active: string;
 }
 
-const Container: FC<ContainerProps> = ({ children }) => {
+const Container: FC<ContainerProps> = ({ children, active }) => {
   return (
     <div>
-      <Header />
+      <Header active={active} />
       <div>{children}</div>
       <Footer />
     </div>

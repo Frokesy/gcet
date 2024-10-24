@@ -23,7 +23,7 @@ const Shop = () => {
   };
 
   return (
-    <Container>
+    <Container active="footwear">
       <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
         <div className="flex space-x-6 w-[90vw] mx-auto">
           {product !== undefined ? (

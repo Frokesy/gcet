@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import {
   AccountIcon,
   CaretDown,
@@ -12,12 +12,18 @@ import BrandDropdown from "../dropdowns/BrandDropdown";
 import HomeDropdown from "../dropdowns/HomeDropdown";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+interface HeaderProps {
+  active: string;
+}
+
+const Header: FC<HeaderProps> = ({ active }) => {
   const [revealCategoryDropdown, setRevealCategoryDropdown] =
     useState<boolean>(false);
   const [revealBrandDropdown, setRevealBrandDropdown] =
     useState<boolean>(false);
   const [revealHomeDropdown, setRevealHomeDropdown] = useState<boolean>(false);
+
+  console.log(active)
   return (
     <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] z-50 bg-[#fff]">
       <div className="w-[90vw] mx-auto py-3 flex justify-between items-center">
@@ -74,7 +80,9 @@ const Header = () => {
             >
               Brands
             </h2>
-            <NavLink to="/contact">Contact us</NavLink>
+            {active === "footwear" && (
+              <NavLink to="/contact">Contact us</NavLink>
+            )}
           </div>
         </div>
         <div className="lg:hidden block">
