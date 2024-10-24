@@ -7,7 +7,7 @@ import NewArrivals from "../../../components/sports/NewArrivals"
 
 const SportsHome = () => {
   return (
-    <Container>
+    <Container active="sports">
       <Hero />
       <BestSellers />
       <FeaturedProducts />
