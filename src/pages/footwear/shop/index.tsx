@@ -1,176 +1,175 @@
-import { useState } from "react";
 import Container from "../../../components/defaults/Container";
-import PriceRangeSlider from "../../../components/defaults/PriceRangeSlider";
-import {
-  ArrowDown,
-  BackIcon,
-  FilterIcon,
-} from "../../../components/svgs/extras";
-import { SearchIcon } from "../../../components/svgs/headerIcons";
-import ShopCatalog, {
-  ProductProps,
-} from "../../../components/footwear/ShopCatalog";
-import Product from "../../../components/footwear/Product";
-import { NavLink } from "react-router-dom";
+import { ProductProps } from "../../../components/footwear/ShopCatalog";
+import Five from "../../../components/stars/Five";
+import ShopTemplate from "../../../components/templates/ShopTemplate";
 
 const Shop = () => {
-  const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
-  const [product, setProduct] = useState<ProductProps>();
-
-  const handlePriceChange = (min: number, max: number) => {
-    setPriceRange({ min, max });
-    return priceRange;
-  };
+  const items: ProductProps[] = [
+    {
+      id: 1,
+      productImg: "/assets/footwear/shops/shop-img-one.png",
+      name: "Nike air monarch iv",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sneakers",
+    },
+    {
+      id: 2,
+      productImg: "/assets/footwear/shops/shop-img-two.png",
+      name: "New balance 1906R",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sneakers",
+    },
+    {
+      id: 3,
+      productImg: "/assets/footwear/shops/shop-img-three.png",
+      name: "Nike dunk low",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sneakers",
+    },
+    {
+      id: 4,
+      productImg: "/assets/footwear/shops/shop-img-four.png",
+      name: "New balance made in USA 990v6",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sneakers",
+    },
+    {
+      id: 5,
+      productImg: "/assets/footwear/shops/shop-img-five.png",
+      name: "Nike air monarch iv",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 6,
+      productImg: "/assets/footwear/shops/shop-img-six.png",
+      name: "New balance 1906R",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 7,
+      productImg: "/assets/footwear/shops/shop-img-seven.png",
+      name: "Nike dunk low",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 8,
+      productImg: "/assets/footwear/shops/shop-img-eight.png",
+      name: "New balance made in USA 990v6",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 9,
+      productImg: "/assets/footwear/shops/shop-img-nine.png",
+      name: "Nike air monarch iv",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sports",
+    },
+    {
+      id: 10,
+      productImg: "/assets/footwear/shops/shop-img-ten.png",
+      name: "New balance 1906R",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sports",
+    },
+    {
+      id: 11,
+      productImg: "/assets/footwear/shops/shop-img-eleven.png",
+      name: "Nike dunk low",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sports",
+    },
+    {
+      id: 12,
+      productImg: "/assets/footwear/shops/shop-img-twelve.png",
+      name: "New balance made in USA 990v6",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sports",
+    },
+    {
+      id: 13,
+      productImg: "/assets/footwear/shops/shop-img-thirteen.png",
+      name: "New balance made in USA 990v6",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sneakers",
+    },
+    {
+      id: 14,
+      productImg: "/assets/footwear/shops/shop-img-fourteen.png",
+      name: "Nike air monarch iv",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 15,
+      productImg: "/assets/footwear/shops/shop-img-fifteen.png",
+      name: "New balance 1906R",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 16,
+      productImg: "/assets/footwear/shops/shop-img-sixteen.png",
+      name: "Nike dunk low",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 17,
+      productImg: "/assets/footwear/shops/shop-img-seventeen.png",
+      name: "New balance made in USA 990v6",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "shoes",
+    },
+    {
+      id: 18,
+      productImg: "/assets/footwear/shops/shop-img-eighteen.png",
+      name: "Nike air monarch iv",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sports",
+    },
+    {
+      id: 19,
+      productImg: "/assets/footwear/shops/shop-img-nineteen.png",
+      name: "New balance 1906R",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sports",
+    },
+    {
+      id: 20,
+      productImg: "/assets/footwear/shops/shop-img-twenty.png",
+      name: "Nike dunk low",
+      ratingIcon: <Five />,
+      price: "200,000.00",
+      category: "sports",
+    },
+  ];
 
   return (
     <Container active="footwear">
-      <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
-        <div className="flex space-x-6 w-[90vw] mx-auto">
-          {product !== undefined ? (
-            <div
-              onClick={() => setProduct(undefined)}
-              className="flex items-center cursor-pointer space-x-2"
-            >
-              <BackIcon />
-              <p className="uppercase">Back</p>
-            </div>
-          ) : (
-            <NavLink
-              to="/"
-              className="flex items-center cursor-pointer space-x-2"
-            >
-              <BackIcon />
-              <p className="uppercase">Back</p>
-            </NavLink>
-          )}
-
-          <div className="flex space-x-1 lg:text-[14px] text-[12px]">
-            <p className="underline">Home</p>
-            <p>/</p>
-            <p className="underline">Men</p>
-            {product?.category && <p className="underline">/</p>}
-            {product?.category && (
-              <p className="underline capitalize">{product.category}</p>
-            )}
-            {product?.category && <p className="underline">/</p>}
-            {product?.name && (
-              <p className="underline">{product.name.slice(0, 10)}...</p>
-            )}
-          </div>
-        </div>
-
-        {product === undefined ? (
-          <div className="">
-            <h2 className="lg:text-[64px] text-[30px] font-semibold px-6 lg:px-0 uppercase mt-10">
-              Men Shoes
-            </h2>
-
-            <div className="flex justify-between items-center">
-              <div className="lg:w-[40%] mt-6 lg:mt-0 px-6 lg:px-0 lg:block pb-4 flex flex-col justify-end lg:bg-none bg-[url('/assets/footwear/ft-ten.png')] bg-cover lg:min-h-0 min-h-[410px]">
-                <h2 className="text-[40px] lg:block hidden font-semibold">
-                  Shop our latest men&apos;s <br /> wear
-                </h2>
-                <h2 className="text-[32px] block lg:hidden font-semibold">
-                  Shop our latest men&apos;s wear
-                </h2>
-                <p className="lg:text-[18px]">
-                  Sign up for deals, new products and promotions
-                </p>
-              </div>
-              <div className="lg:block hidden w-[50%]">
-                <img src="/assets/footwear/ft-ten.png" alt="shop-img" />
-              </div>
-            </div>
-
-            <div className="mt-10 w-[90vw] mx-auto">
-              {/**Desktop selector */}
-              <div className="lg:flex hidden justify-between items-center">
-                <div className="flex items-center justify-between w-[15%]">
-                  <p>Hide Filters</p>
-                  <FilterIcon />
-                </div>
-                <div className="input border border-[#ccc] flex items-center rounded-full py-1.5 px-5 w-[30%] bg-[#eee] space-x-3">
-                  <SearchIcon />
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    className="border-none outline-none placeholder:text-[#333] bg-inherit"
-                  />
-                </div>
-                <div className="flex items-center justify-between border border-[#808080] p-2 rounded-lg w-[15%]">
-                  <p>Sort By</p>
-                  <ArrowDown />
-                </div>
-              </div>
-
-              {/**Mobile selector*/}
-              <div className="flex lg:hidden flex-col justify-between items-center">
-                <div className="flex items-center justify-between w-[100%]">
-                  <p>Hide Filters</p>
-                  <FilterIcon />
-                </div>
-                <div className="flex justify-between w-[100%] mt-6">
-                  <div className="input flex items-center rounded-lg py-1 px-2 w-[45%] bg-[#eee] space-x-3">
-                    <SearchIcon />
-                    <input
-                      type="text"
-                      placeholder="Search"
-                      className="border-none outline-none placeholder:text-[#333] bg-inherit w-[100%]"
-                    />
-                  </div>
-                  <div className="flex items-center justify-between p-1 rounded-lg w-[45%]">
-                    <p>Sort By</p>
-                    <ArrowDown />
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-between lg:space-x-16 mt-10">
-                <div className="lg:flex hidden flex-col w-[15%]">
-                  <h2>Selected filters</h2>
-                  <button className="p-2 bg-[#000] w-12 text-[#fff] uppercase mt-3 mb-6">
-                    All
-                  </button>
-
-                  <div className="space-y-8 mt-6 w-[100%]">
-                    <div className="flex items-center justify-between">
-                      <p>Gender</p>
-                      <ArrowDown />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <p>Type</p>
-                      <ArrowDown />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <p>Color</p>
-                      <ArrowDown />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <p>Brand</p>
-                      <ArrowDown />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <p>Collections</p>
-                      <ArrowDown />
-                    </div>
-                    <PriceRangeSlider
-                      min={0}
-                      max={1000}
-                      onChange={handlePriceChange}
-                    />
-                  </div>
-                </div>
-
-                <div className="lg:w-[85%]">
-                  <ShopCatalog setProduct={setProduct} />
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <Product product={product} />
-        )}
-      </div>
+      <ShopTemplate products={items} themeColor="#000" active="footwear" />
     </Container>
   );
 };

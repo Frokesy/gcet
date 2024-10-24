@@ -13,7 +13,7 @@ interface ContactTemplateProps {
 
 const ContactTemplate: FC<ContactTemplateProps> = ({ themeColor }) => {
   return (
-    <div className="py-[10vh] flex lg:flex-row flex-col-reverse justify-between">
+    <div className="pt-[10vh] lg:pb-10 flex lg:flex-row flex-col-reverse justify-between">
       <div className={`bg-[${themeColor}] text-[#fff] py-10 lg:w-[35%] lg:pl-20 pl-6 pr-6 mt-10 lg:mt-0`}>
         <h2 className="text-[24px] font-semibold">Get in touch</h2>
         <p className="text-[#E9D7FE]">
