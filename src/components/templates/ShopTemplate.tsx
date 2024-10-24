@@ -46,6 +46,15 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
                 <p className="uppercase">Back</p>
               </NavLink>
             )}
+            {active === "wristwatch" && (
+              <NavLink
+                to="/tmp-2/home"
+                className="flex items-center cursor-pointer space-x-2"
+              >
+                <BackIcon />
+                <p className="uppercase">Back</p>
+              </NavLink>
+            )}
           </div>
         )}
 
@@ -66,26 +75,38 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
 
       {product === undefined ? (
         <div className="">
-          <h2 className="lg:text-[64px] text-[30px] font-semibold px-6 lg:px-0 uppercase mt-10">
-            Men Shoes
-          </h2>
+          {active === "footwear" ? (
+            <div className="">
+              <h2 className="lg:text-[64px] text-[30px] font-semibold px-6 lg:px-0 uppercase mt-10">
+                Men Shoes
+              </h2>
 
-          <div className="flex justify-between items-center">
-            <div className="lg:w-[40%] mt-6 lg:mt-0 px-6 lg:px-0 lg:block pb-4 flex flex-col justify-end lg:bg-none bg-[url('/assets/footwear/ft-ten.png')] bg-cover lg:min-h-0 min-h-[410px]">
-              <h2 className="text-[40px] lg:block hidden font-semibold">
-                Shop our latest men&apos;s <br /> wear
-              </h2>
-              <h2 className="text-[32px] block lg:hidden font-semibold">
-                Shop our latest men&apos;s wear
-              </h2>
-              <p className="lg:text-[18px]">
-                Sign up for deals, new products and promotions
-              </p>
+              <div className="flex justify-between items-center">
+                <div className="lg:w-[40%] mt-6 lg:mt-0 px-6 lg:px-0 lg:block pb-4 flex flex-col justify-end lg:bg-none bg-[url('/assets/footwear/ft-ten.png')] bg-cover lg:min-h-0 min-h-[410px]">
+                  <h2 className="text-[40px] lg:block hidden font-semibold">
+                    Shop our latest men&apos;s <br /> wear
+                  </h2>
+                  <h2 className="text-[32px] block lg:hidden font-semibold">
+                    Shop our latest men&apos;s wear
+                  </h2>
+                  <p className="lg:text-[18px]">
+                    Sign up for deals, new products and promotions
+                  </p>
+                </div>
+                <div className="lg:block hidden w-[50%]">
+                  <img src="/assets/footwear/ft-ten.png" alt="shop-img" />
+                </div>
+              </div>
             </div>
-            <div className="lg:block hidden w-[50%]">
-              <img src="/assets/footwear/ft-ten.png" alt="shop-img" />
+          ) : (
+            <div className="">
+              {active === "wristwatch" && (
+                <div className="w-[100%] mt-10">
+                  <img src="/assets/wristwatch/cover.png" alt="shop-img" className="w-[100%]" />
+                </div>
+              )}
             </div>
-          </div>
+          )}
 
           <div className="mt-10 w-[90vw] mx-auto">
             {/**Desktop selector */}

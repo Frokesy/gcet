@@ -3,7 +3,7 @@ import { ProductProps } from "../../../components/footwear/ShopCatalog";
 import Five from "../../../components/stars/Five";
 import ShopTemplate from "../../../components/templates/ShopTemplate";
 
-const Shop = () => {
+const FootwearShop = () => {
   const items: ProductProps[] = [
     {
       id: 1,
@@ -174,4 +174,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default FootwearShop;

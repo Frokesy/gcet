@@ -112,9 +112,16 @@ const Header: FC<HeaderProps> = ({ active }) => {
               className="border-none outline-none placeholder:text-[#333] bg-inherit"
             />
           </div>
-          <NavLink to="/shop">
-            <ShopIcon />
-          </NavLink>
+          {active === "footwear" && (
+            <NavLink to="/shop">
+              <ShopIcon />
+            </NavLink>
+          )}
+          {active === "wristwatch" && (
+            <NavLink to="/tmp-2/shop">
+              <ShopIcon />
+            </NavLink>
+          )}
           <NavLink to="/cart">
             <CartIcon />
           </NavLink>
