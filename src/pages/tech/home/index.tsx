@@ -9,7 +9,7 @@ import TopSeller from "../../../components/tech/TopSeller"
 
 const TechHome = () => {
   return (
-    <Container>
+    <Container active="tech">
         <Hero />
         <Brands />
         <NewArrivals />

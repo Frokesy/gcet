@@ -91,6 +91,9 @@ const Header: FC<HeaderProps> = ({ active }) => {
             {active === "clothes" && (
               <NavLink to="/tmp-4/contact">Contact us</NavLink>
             )}
+            {active === "tech" && (
+              <NavLink to="/tmp-5/contact">Contact us</NavLink>
+            )}
           </div>
         </div>
         <div className="lg:hidden block">

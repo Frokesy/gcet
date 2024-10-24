@@ -13,6 +13,7 @@ import SportsHome from "./pages/sports/home";
 import ClothesContact from "./pages/clothes/contact";
 import WristwatchContact from "./pages/wristwatch/contact";
 import FurnitureContact from "./pages/furniture/contact";
+import TechContact from "./pages/tech/contact";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -33,7 +34,12 @@ const App = () => {
 
     { path: "/tmp-4/home", element: <ClothesHome /> },
     { path: "/tmp-4/contact", element: <ClothesContact /> },
+
+
     { path: "/tmp-5/home", element: <TechHome /> },
+    { path: "/tmp-5/contact", element: <TechContact /> },
+
+    
     { path: "/tmp-6/home", element: <SportsHome /> },
   ]);
   return <RouterProvider router={router} />;
