@@ -10,6 +10,7 @@ import FurnitureHome from "./pages/furniture/home";
 import ClothesHome from "./pages/clothes/home";
 import TechHome from "./pages/tech/home";
 import SportsHome from "./pages/sports/home";
+import ClothesContact from "./pages/clothes/contact";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -19,9 +20,14 @@ const App = () => {
     { path: "/shop", element: <Shop /> },
     { path: "/cart", element: <Cart /> },
     { path: "/track-order", element: <TrackOrder /> },
+
+
     { path: "/tmp-2/home", element: <WristwatchHome /> },
     { path: "/tmp-3/home", element: <FurnitureHome /> },
+
+    
     { path: "/tmp-4/home", element: <ClothesHome /> },
+    { path: "/tmp-4/contact", element: <ClothesContact /> },
     { path: "/tmp-5/home", element: <TechHome /> },
     { path: "/tmp-6/home", element: <SportsHome /> },
   ]);

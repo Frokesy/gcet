@@ -23,7 +23,6 @@ const Header: FC<HeaderProps> = ({ active }) => {
     useState<boolean>(false);
   const [revealHomeDropdown, setRevealHomeDropdown] = useState<boolean>(false);
 
-  console.log(active)
   return (
     <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] z-50 bg-[#fff]">
       <div className="w-[90vw] mx-auto py-3 flex justify-between items-center">
@@ -82,6 +81,9 @@ const Header: FC<HeaderProps> = ({ active }) => {
             </h2>
             {active === "footwear" && (
               <NavLink to="/contact">Contact us</NavLink>
+            )}
+            {active === "clothes" && (
+              <NavLink to="/tmp-4/contact">Contact us</NavLink>
             )}
           </div>
         </div>

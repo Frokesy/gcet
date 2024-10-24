@@ -8,7 +8,7 @@ import Container from "../../../components/defaults/Container"
 
 const ClothesHome = () => {
   return (
-    <Container>
+    <Container active="clothes">
         <Hero />
         <Brands />
         <NewArrivals />
