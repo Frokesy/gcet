@@ -8,7 +8,7 @@ export interface ItemProps {
   price: string;
 }
 
-const Cart = () => {
+const FootwearCart = () => {
 
   const items: ItemProps[] = [
     {
@@ -44,4 +44,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default FootwearCart;

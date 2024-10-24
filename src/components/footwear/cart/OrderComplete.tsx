@@ -16,7 +16,7 @@ const OrderComplete: FC<OrderCompleteProps> = ({ items }) => {
         Order created and delivery in progress
       </p>
 
-      <div className="mt-6 grid lg:grid-cols-4 grid-cols-2 lg:gap-10 gap-16">
+      <div className="mt-6 grid lg:flex flex-row items-center space-x-10 grid-cols-2 place-items-center lg:gap-10 gap-16">
         {items.map((item) => (
           <div className="w-[96px] h-[112px] relative" key={item.id}>
             <p className="absolute top-0 right-0 w-[20px] h-[20px] bg-[#000] text-[#fff] text-[14px] rounded-full">

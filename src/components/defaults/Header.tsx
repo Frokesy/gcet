@@ -142,9 +142,36 @@ const Header: FC<HeaderProps> = ({ active }) => {
               <ShopIcon />
             </NavLink>
           )}
-          <NavLink to="/cart">
-            <CartIcon />
-          </NavLink>
+          {active === "footwear" && (
+            <NavLink to="/cart">
+              <CartIcon />
+            </NavLink>
+          )}
+          {active === "wristwatch" && (
+            <NavLink to="/tmp-2/cart">
+              <CartIcon />
+            </NavLink>
+          )}
+          {active === "furniture" && (
+            <NavLink to="/tmp-3/cart">
+              <CartIcon />
+            </NavLink>
+          )}
+          {active === "clothes" && (
+            <NavLink to="/tmp-4/cart">
+              <CartIcon />
+            </NavLink>
+          )}
+          {active === "tech" && (
+            <NavLink to="/tmp-5/cart">
+              <CartIcon />
+            </NavLink>
+          )}
+          {active === "sports" && (
+            <NavLink to="/tmp-6/cart">
+              <CartIcon />
+            </NavLink>
+          )}
           <NavLink to="/profile">
             <AccountIcon />
           </NavLink>

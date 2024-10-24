@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Contact from "./pages/footwear/contact";
 import FootwearHome from "./pages/footwear/home";
 import AccountProfile from "./pages/footwear/profile";
-import Cart from "./pages/footwear/cart";
 import TrackOrder from "./pages/footwear/track-orders";
 import WristwatchHome from "./pages/wristwatch/home";
 import FurnitureHome from "./pages/furniture/home";
@@ -20,6 +19,8 @@ import FurnitureShop from "./pages/furniture/shop";
 import ClothesShop from "./pages/clothes/shop";
 import TechShop from "./pages/tech/shop";
 import SportsShop from "./pages/sports/shop";
+import FootwearCart from "./pages/footwear/cart";
+import WristwatchCart from "./pages/wristwatch/cart";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,13 +29,14 @@ const App = () => {
     { path: "/contact", element: <Contact /> },
     { path: "/profile", element: <AccountProfile /> },
     { path: "/shop", element: <FootwearShop /> },
-    { path: "/cart", element: <Cart /> },
+    { path: "/cart", element: <FootwearCart /> },
     { path: "/track-order", element: <TrackOrder /> },
 
     //wristwatch template routes
     { path: "/tmp-2/home", element: <WristwatchHome /> },
     { path: "/tmp-2/contact", element: <WristwatchContact /> },
     { path: "/tmp-2/shop", element: <WristwatchShop /> },
+    { path: "/tmp-2/cart", element: <WristwatchCart /> },
 
     //furniture template routes
     { path: "/tmp-3/home", element: <FurnitureHome /> },
