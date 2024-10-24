@@ -82,6 +82,15 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
                 <p className="uppercase">Back</p>
               </NavLink>
             )}
+            {active === "sports" && (
+              <NavLink
+                to="/tmp-6/home"
+                className="flex items-center cursor-pointer space-x-2"
+              >
+                <BackIcon />
+                <p className="uppercase">Back</p>
+              </NavLink>
+            )}
           </div>
         )}
 
@@ -158,6 +167,15 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
                 <div className="w-[100%] mt-10">
                   <img
                     src="/assets/tech/th-one.png"
+                    alt="shop-img"
+                    className="w-[100%] lg:h-[470px] object-cover"
+                  />
+                </div>
+              )}
+              {active === "sports" && (
+                <div className="w-[100%] mt-10">
+                  <img
+                    src="/assets/sports/st-one.png"
                     alt="shop-img"
                     className="w-[100%] lg:h-[470px] object-cover"
                   />

@@ -137,6 +137,11 @@ const Header: FC<HeaderProps> = ({ active }) => {
               <ShopIcon />
             </NavLink>
           )}
+          {active === "sports" && (
+            <NavLink to="/tmp-6/shop">
+              <ShopIcon />
+            </NavLink>
+          )}
           <NavLink to="/cart">
             <CartIcon />
           </NavLink>

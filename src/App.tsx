@@ -19,6 +19,7 @@ import WristwatchShop from "./pages/wristwatch/shop";
 import FurnitureShop from "./pages/furniture/shop";
 import ClothesShop from "./pages/clothes/shop";
 import TechShop from "./pages/tech/shop";
+import SportsShop from "./pages/sports/shop";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -53,6 +54,8 @@ const App = () => {
     //sports template routes
     { path: "/tmp-6/home", element: <SportsHome /> },
     { path: "/tmp-6/contact", element: <SportsContact /> },
+    { path: "/tmp-6/shop", element: <SportsShop /> },
+
   ]);
   return <RouterProvider router={router} />;
 };
