@@ -26,6 +26,7 @@ import ClothesCart from "./pages/clothes/cart";
 import FurnitureCart from "./pages/furniture/cart";
 import SportsCart from "./pages/sports/cart";
 import { AnimatePresence } from "framer-motion"
+import Signup from "./pages/auth/Signup";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -36,6 +37,8 @@ const App = () => {
     { path: "/shop", element: <FootwearShop /> },
     { path: "/cart", element: <FootwearCart /> },
     { path: "/track-order", element: <TrackOrder /> },
+
+    { path: "/auth/signup", element: <Signup /> },
 
     //wristwatch template routes
     { path: "/tmp-2/home", element: <WristwatchHome /> },
