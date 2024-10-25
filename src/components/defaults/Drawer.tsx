@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React, { FC, SetStateAction, useState } from "react";
 import { NavLink } from "react-router-dom";
 import HomeDropdown from "../dropdowns/HomeDropdown";
+import { ArrowDown } from "../svgs/extras";
 
 interface DrawerProps {
   setOpenDrawer: React.Dispatch<SetStateAction<boolean>>;
@@ -44,23 +45,27 @@ const Drawer: FC<DrawerProps> = ({ setOpenDrawer }) => {
                 className="flex justify-between items-center"
               >
                 <p>Home</p>
-                <p
-                  className={`text-[20px] transition-transform duration-300 ${
-                    isRotated ? "rotate-90" : "rotate-0"
+                <div
+                  className={`transition-transform duration-300 ${
+                    isRotated ? "rotate-0" : "-rotate-90"
                   }`}
                 >
-                  {">"}
-                </p>
+                  <ArrowDown />
+                </div>
               </div>
               {revealHomeDropdown && <HomeDropdown />}
             </div>
             <div className="flex justify-between items-center">
               <p>Categories</p>
-              <p className="text-[20px]">{">"}</p>
+              <div className="-rotate-90">
+                <ArrowDown />
+              </div>
             </div>
             <div className="flex justify-between items-center">
               <p>Brands</p>
-              <p className="text-[20px]">{">"}</p>
+              <div className="-rotate-90">
+                <ArrowDown />
+              </div>
             </div>
             <NavLink to="/contact">Contact Us</NavLink>
             <p>Track Delivery</p>
