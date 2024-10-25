@@ -13,19 +13,19 @@ const Categories = () => {
             <button className="bg-[#606baf] p-2 rounded-xl text-[#fff]">
               Phones
             </button>
-            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3]">
+            <button className="border border-[#727684] hover:bg-[#606baf] hover:text-[#fff] transition-all duration-300 ease-in-out p-2 rounded-xl text-[#98A2B3]">
               Laptops
             </button>
-            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3]">
+            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3] hover:bg-[#606baf] hover:text-[#fff] transition-all duration-300 ease-in-out">
               Monitors
             </button>
-            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3]">
+            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3] hover:bg-[#606baf] hover:text-[#fff] transition-all duration-300 ease-in-out">
               Tablets
             </button>
-            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3]">
+            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3] hover:bg-[#606baf] hover:text-[#fff] transition-all duration-300 ease-in-out">
               Headphones
             </button>
-            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3]">
+            <button className="border border-[#727684] p-2 rounded-xl text-[#98A2B3] hover:bg-[#606baf] hover:text-[#fff] transition-all duration-300 ease-in-out">
               See All
             </button>
           </div>

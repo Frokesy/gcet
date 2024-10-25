@@ -65,7 +65,6 @@ const Drawer: FC<DrawerProps> = ({ setOpenDrawer }) => {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className=""
                 >
                   <HomeDropdown />
                 </motion.div>

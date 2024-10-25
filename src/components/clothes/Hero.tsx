@@ -13,10 +13,10 @@ const Hero = () => {
           </p>
           <button className="bg-[#553a32] text-[#fff] py-3 rounded-lg w-[40%] lg:text-[16px] text-[14px] font-semibold">Shop Now</button>
         </div>
-        <div className="lg:w-[60%] flex space-x-4 lg:justify-end lg:items-end bg-[#fff] rounded-[50px]">
-            <img src="/assets/clothes/cl-one.png" alt="img" className="lg:h-[256px] lg:w-[30%] w-[100%] h-[432px]" />
-            <img src="/assets/clothes/cl-two.png" alt="img" className="h-[384px] w-[30%] lg:block hidden" />
-            <img src="/assets/clothes/cl-three.png" alt="img" className="h-[536px] w-[40%] lg:block hidden" />
+        <div className="lg:w-[60%] flex space-x-4 lg:justify-between lg:items-end bg-[#fff] rounded-[50px]">
+            <img src="/assets/clothes/cl-one.png" alt="img" className="lg:h-[256px] lg:w-[20%] w-[100%] h-[432px] hover:scale-110 transition-all duration-1000 ease-in-out" />
+            <img src="/assets/clothes/cl-two.png" alt="img" className="h-[384px] w-[35%] lg:block hidden hover:scale-110 transition-all duration-1000 ease-in-out" />
+            <img src="/assets/clothes/cl-three.png" alt="img" className="h-[536px] w-[40%] lg:block hidden hover:scale-110 transition-all duration-1000 ease-in-out" />
         </div>
       </div>
     </div>

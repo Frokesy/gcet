@@ -6,27 +6,48 @@ const Categories = () => {
       </h2>
       <div className="mt-6 flex flex-col space-y-4">
         <div className="flex lg:flex-row flex-col justify-between space-y-4 lg:space-y-0">
-          <div className="lg:w-[43%] bg-[url('/assets/furniture/fur-four.png')] lg:h-[289px] h-[205px] rounded-2xl relative">
-            <div className="absolute top-0 left-0 rounded-2xl bg-[#000] text-[#fff] w-[100%] h-[100%] bg-opacity-40 p-6 lg:text-[32px]">
-              <h2>Living room</h2>
-            </div>
+          <div className="lg:w-[43%] lg:h-[289px] h-[205px] rounded-2xl relative overflow-hidden">
+            <img
+              src="/assets/furniture/fur-four.png"
+              alt="img"
+              className="w-[100%] h-[100%] hover:scale-125 transition-all duration-700 ease-in-out"
+            />
+            <p className="absolute top-0 p-6 text-[#fff] lg:text-[32px]">
+              Living Room
+            </p>
           </div>
-          <div className="relative lg:w-[55%] bg-[url('/assets/furniture/fur-five.png')] lg:h-[289px] h-[205px] rounded-2xl">
-            <div className="absolute top-0 left-0 rounded-2xl bg-[#000] text-[#fff] w-[100%] h-[100%] bg-opacity-40 p-6 lg:text-[32px]">
-              <h2>Bedroom</h2>
-            </div>
+
+          <div className="relative lg:w-[55%] lg:h-[289px] h-[205px] rounded-2xl overflow-hidden">
+            <img
+              src="/assets/furniture/fur-five.png"
+              alt="img"
+              className="w-[100%] h-[100%] hover:scale-125 transition-all duration-700 ease-in-out"
+            />
+            <p className="absolute top-0 p-6 text-[#fff] lg:text-[32px]">
+              Bedroom
+            </p>
           </div>
         </div>
         <div className="flex lg:flex-row flex-col justify-between space-y-4 lg:space-y-0">
-          <div className="relative lg:w-[55%] bg-[url('/assets/furniture/fur-six.png')] lg:h-[289px] h-[205px] rounded-2xl">
-            <div className="absolute top-0 left-0 rounded-2xl bg-[#000] text-[#fff] w-[100%] h-[100%] bg-opacity-40 p-6 lg:text-[32px]">
-              <h2>Commercial</h2>
-            </div>
+          <div className="relative lg:w-[55%] lg:h-[289px] h-[205px] rounded-2xl overflow-hidden">
+            <img
+              src="/assets/furniture/fur-six.png"
+              alt="img"
+              className="w-[100%] h-[100%] hover:scale-125 transition-all duration-700 ease-in-out"
+            />
+            <p className="absolute top-0 p-6 text-[#fff] lg:text-[32px]">
+              Commercial
+            </p>
           </div>
-          <div className="relative lg:w-[43%] bg-[url('/assets/furniture/fur-seven.png')] lg:h-[289px] h-[205px] rounded-2xl">
-            <div className="absolute top-0 left-0 rounded-2xl bg-[#000] text-[#fff] w-[100%] h-[100%] bg-opacity-40 p-6 lg:text-[32px]">
-              <h2>Kitchen</h2>
-            </div>
+          <div className="relative lg:w-[43%] lg:h-[289px] h-[205px] rounded-2xl overflow-hidden">
+            <img
+              src="/assets/furniture/fur-seven.png"
+              alt="img"
+              className="w-[100%] h-[100%] hover:scale-125 transition-all duration-700 ease-in-out"
+            />
+            <p className="absolute top-0 p-6 text-[#fff] lg:text-[32px]">
+              Kitchen
+            </p>
           </div>
         </div>
       </div>

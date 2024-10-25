@@ -13,7 +13,7 @@ const Promotions = () => {
             <button className="bg-[#fff] py-2 px-6 rounded-xl font-semibold text-[#333] font-sans">Shop Now</button>
         </div>
         <div className="w-[45%] lg:block hidden">
-            <img src="/assets/clothes/cl-two.png" className="w-[541px] h-[532px] object-cover" alt="img" />
+            <img src="/assets/clothes/cl-two.png" className="w-[541px] h-[532px] hover:w-[270px] hover:h-[384px] transition-all duration-500 ease-in-out object-cover" alt="img" />
         </div>
       </div>
     </div>

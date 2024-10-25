@@ -74,7 +74,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
               <h2>Categories</h2>
               <CaretDown />
             </div>
-            <h2
+            <div
               className="flex items-center space-x-2 cursor-pointer hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
               onClick={() => {
                 if (revealCategoryDropdown || revealHomeDropdown) {
@@ -88,7 +88,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
             >
               <h2>Brands</h2>
               <CaretDown />
-            </h2>
+            </div>
             {active === "footwear" && (
               <NavLink
                 className="hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
