@@ -25,6 +25,7 @@ import TechCart from "./pages/tech/cart";
 import ClothesCart from "./pages/clothes/cart";
 import FurnitureCart from "./pages/furniture/cart";
 import SportsCart from "./pages/sports/cart";
+import { AnimatePresence } from "framer-motion"
 
 const App = () => {
   const router = createBrowserRouter([
@@ -67,7 +68,11 @@ const App = () => {
     { path: "/tmp-6/cart", element: <SportsCart /> },
 
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <AnimatePresence mode="wait">
+      <RouterProvider router={router} />;
+    </AnimatePresence>
+  )
 };
 
 export default App;

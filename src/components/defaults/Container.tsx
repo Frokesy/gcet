@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react"
 import Header from "./Header"
 import Footer from "../footwear/Footer";
+import PageTransition from "./PageTransition";
 
 interface ContainerProps {
     children: ReactNode;
@@ -11,7 +12,7 @@ const Container: FC<ContainerProps> = ({ children, active }) => {
   return (
     <div>
       <Header active={active} />
-      <div>{children}</div>
+      <PageTransition>{children}</PageTransition>
       <Footer />
     </div>
   )

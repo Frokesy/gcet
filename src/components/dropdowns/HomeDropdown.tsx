@@ -4,7 +4,7 @@ const HomeDropdown = () => {
   return (
     <div className="bg-[#fff] lg:shadow-xl lg:left-[9vw] lg:py-4 lg:fixed">
       <div className="">
-        <div className="space-y-2 lg:text-[15px] text-[14px] flex flex-col">
+        <div className="space-y-2 lg:text-[15px] text-[14px] flex flex-col px-2">
           <NavLink
             to="/"
             className="hover:bg-[#000] hover:text-[#fff] lg:pl-3 pr-6 py-2 rounded-md transition-all duration-300 ease-in-out"
