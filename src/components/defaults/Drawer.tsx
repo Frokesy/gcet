@@ -8,6 +8,12 @@ interface DrawerProps {
   setOpenDrawer: React.Dispatch<SetStateAction<boolean>>;
 }
 
+const dropdownVariants = {
+  initial: { opacity: 0, y: -20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -10, transition: { duration: 0.6 } },
+};
+
 const Drawer: FC<DrawerProps> = ({ setOpenDrawer }) => {
   //   const [revealCategoryDropdown, setRevealCategoryDropdown] =
   //     useState<boolean>(false);
@@ -53,7 +59,17 @@ const Drawer: FC<DrawerProps> = ({ setOpenDrawer }) => {
                   <ArrowDown />
                 </div>
               </div>
-              {revealHomeDropdown && <HomeDropdown />}
+              {revealHomeDropdown && (
+                <motion.div
+                  variants={dropdownVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className=""
+                >
+                  <HomeDropdown />
+                </motion.div>
+              )}
             </div>
             <div className="flex justify-between items-center">
               <p>Categories</p>

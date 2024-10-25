@@ -12,10 +12,17 @@ import BrandDropdown from "../dropdowns/BrandDropdown";
 import HomeDropdown from "../dropdowns/HomeDropdown";
 import { NavLink } from "react-router-dom";
 import Drawer from "./Drawer";
+import { motion } from "framer-motion";
 
 interface HeaderProps {
   active: string;
 }
+
+const dropdownVariants = {
+  initial: { opacity: 0, y: -20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -10, transition: { duration: 0.6 } },
+};
 
 const Header: FC<HeaderProps> = ({ active }) => {
   const [revealCategoryDropdown, setRevealCategoryDropdown] =
@@ -23,7 +30,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
   const [revealBrandDropdown, setRevealBrandDropdown] =
     useState<boolean>(false);
   const [revealHomeDropdown, setRevealHomeDropdown] = useState<boolean>(false);
-  const [openDrawer, setOpenDrawer] = useState<boolean>(false)
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
   return (
     <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] z-50 bg-[#fff]">
@@ -47,13 +54,13 @@ const Header: FC<HeaderProps> = ({ active }) => {
                   setRevealHomeDropdown(!revealHomeDropdown);
                 }
               }}
-              className="flex items-center space-x-2 cursor-pointer"
+              className="flex items-center space-x-2 hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out cursor-pointer"
             >
               <h2>Home</h2>
               <CaretDown />
             </div>
             <div
-              className="flex items-center space-x-2 cursor-pointer"
+              className="flex items-center space-x-2 cursor-pointer hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
               onClick={() => {
                 if (revealBrandDropdown || revealHomeDropdown) {
                   setRevealBrandDropdown(false);
@@ -68,7 +75,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
               <CaretDown />
             </div>
             <h2
-              className="cursor-pointer"
+              className="flex items-center space-x-2 cursor-pointer hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
               onClick={() => {
                 if (revealCategoryDropdown || revealHomeDropdown) {
                   setRevealCategoryDropdown(false);
@@ -79,25 +86,56 @@ const Header: FC<HeaderProps> = ({ active }) => {
                 }
               }}
             >
-              Brands
+              <h2>Brands</h2>
+              <CaretDown />
             </h2>
             {active === "footwear" && (
-              <NavLink to="/contact">Contact us</NavLink>
+              <NavLink
+                className="hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
+                to="/contact"
+              >
+                Contact us
+              </NavLink>
             )}
             {active === "wristwatch" && (
-              <NavLink to="/tmp-2/contact">Contact us</NavLink>
+              <NavLink
+                className="hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
+                to="/tmp-2/contact"
+              >
+                Contact us
+              </NavLink>
             )}
             {active === "furniture" && (
-              <NavLink to="/tmp-3/contact">Contact us</NavLink>
+              <NavLink
+                className="hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
+                to="/tmp-3/contact"
+              >
+                Contact us
+              </NavLink>
             )}
             {active === "clothes" && (
-              <NavLink to="/tmp-4/contact">Contact us</NavLink>
+              <NavLink
+                className="hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
+                to="/tmp-4/contact"
+              >
+                Contact us
+              </NavLink>
             )}
             {active === "tech" && (
-              <NavLink to="/tmp-5/contact">Contact us</NavLink>
+              <NavLink
+                className="hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
+                to="/tmp-5/contact"
+              >
+                Contact us
+              </NavLink>
             )}
             {active === "sports" && (
-              <NavLink to="/tmp-6/contact">Contact us</NavLink>
+              <NavLink
+                className="hover:text-[#363f72] hover:font-semibold transition-all duration-300 ease-in-out"
+                to="/tmp-6/contact"
+              >
+                Contact us
+              </NavLink>
             )}
           </div>
         </div>
@@ -179,9 +217,39 @@ const Header: FC<HeaderProps> = ({ active }) => {
           </NavLink>
         </div>
       </div>
-      {revealCategoryDropdown && <CategoriesDropdown />}
-      {revealBrandDropdown && <BrandDropdown />}
-      {revealHomeDropdown && <HomeDropdown />}
+      {revealHomeDropdown && (
+        <motion.div
+          variants={dropdownVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="absolute w-full"
+        >
+          <HomeDropdown />
+        </motion.div>
+      )}
+      {revealCategoryDropdown && (
+        <motion.div
+          variants={dropdownVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="absolute w-full"
+        >
+          <CategoriesDropdown />
+        </motion.div>
+      )}
+      {revealBrandDropdown && (
+        <motion.div
+          variants={dropdownVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="absolute w-full"
+        >
+          <BrandDropdown />
+        </motion.div>
+      )}
       {openDrawer && <Drawer setOpenDrawer={setOpenDrawer} />}
     </div>
   );
