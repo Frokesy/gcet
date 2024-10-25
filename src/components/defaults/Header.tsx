@@ -25,7 +25,6 @@ const Header: FC<HeaderProps> = ({ active }) => {
   const [revealHomeDropdown, setRevealHomeDropdown] = useState<boolean>(false);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false)
 
-  console.log(openDrawer)
   return (
     <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] z-50 bg-[#fff]">
       <div className="w-[90vw] mx-auto py-3 flex justify-between items-center">
