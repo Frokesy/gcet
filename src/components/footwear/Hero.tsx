@@ -16,7 +16,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="lg:w-[50%] flex lg:justify-end">
+      <div className="lg:w-[50%] flex lg:justify-end mt-10 lg:mt-0">
         <img src="/assets/footwear/ft-one.png" alt="footwear-one" />
       </div>
     </div>

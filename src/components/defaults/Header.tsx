@@ -11,6 +11,7 @@ import CategoriesDropdown from "../dropdowns/CategoriesDropdown";
 import BrandDropdown from "../dropdowns/BrandDropdown";
 import HomeDropdown from "../dropdowns/HomeDropdown";
 import { NavLink } from "react-router-dom";
+import Drawer from "./Drawer";
 
 interface HeaderProps {
   active: string;
@@ -22,7 +23,9 @@ const Header: FC<HeaderProps> = ({ active }) => {
   const [revealBrandDropdown, setRevealBrandDropdown] =
     useState<boolean>(false);
   const [revealHomeDropdown, setRevealHomeDropdown] = useState<boolean>(false);
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false)
 
+  console.log(openDrawer)
   return (
     <div className="border-b-2 border-[#ccc] shadow-md fixed w-[100%] z-50 bg-[#fff]">
       <div className="w-[90vw] mx-auto py-3 flex justify-between items-center">
@@ -99,7 +102,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
             )}
           </div>
         </div>
-        <div className="lg:hidden block">
+        <div className="lg:hidden block" onClick={() => setOpenDrawer(true)}>
           <MobileHamburger />
         </div>
 
@@ -180,6 +183,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
       {revealCategoryDropdown && <CategoriesDropdown />}
       {revealBrandDropdown && <BrandDropdown />}
       {revealHomeDropdown && <HomeDropdown />}
+      {openDrawer && <Drawer setOpenDrawer={setOpenDrawer} />}
     </div>
   );
 };
