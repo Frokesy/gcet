@@ -14,7 +14,7 @@ const Container: FC<ContainerProps> = ({ children, active }) => {
     <div>
       <Header active={active} />
       <PageTransition><div className="pt-4">{children}</div></PageTransition>
-      <Footer />
+      <Footer active={active} />
     </div>
   )
 }

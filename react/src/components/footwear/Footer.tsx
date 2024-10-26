@@ -1,4 +1,4 @@
-
+import { FC } from "react";
 import { Facebook, Instagram, Youtube } from "../svgs/extras";
 import {
   AmericanExpressCard,
@@ -9,7 +9,11 @@ import {
   VisaCard,
 } from "../svgs/footerIcons";
 
-const Footer = () => {
+interface FooterProps {
+  active: string;
+}
+
+const Footer: FC<FooterProps> = ({ active }) => {
   return (
     <div className="lg:bg-[#000] text-[#fff] lg:mt-[25vh] mt-14">
       <div className="lg:w-[90vw] mx-auto relative">
@@ -18,7 +22,9 @@ const Footer = () => {
             <h2 className="lg:text-[40px] text-[24px] uppercase font-semibold">
               Join our newsletter
             </h2>
-            <p className="lg:text-[16px] text-[15px]">Stay upto date about our latest offers</p>
+            <p className="lg:text-[16px] text-[15px]">
+              Stay upto date about our latest offers
+            </p>
           </div>
           <div className="flex flex-col lg:items-center lg:mt-0 mt-10 space-y-4">
             <div className="border border-[#808080] rounded-xl lg:w-[360px] w-[100%] py-2 px-4">
@@ -28,7 +34,15 @@ const Footer = () => {
                 className="bg-inherit outline-none border-none"
               />
             </div>
-            <button className="bg-[#000] text-[#fff] uppercase w-[100%] py-3 px-4 rounded-xl">
+            <button
+              className={`${active === "footwear" && "bg-[#000]"} ${
+                active === "wristwatch" && "bg-[#ff4405]"
+              } ${active === "furniture" && "bg-[#0e9384]"} ${
+                active === "clothes" && "bg-[#553a32]"
+              } ${active === "tech" && "bg-[#3e4784]"} ${
+                active === "sports" && "bg-[#039855]"
+              }  text-[#fff] uppercase w-[100%] py-3 px-4 rounded-xl`}
+            >
               Subscribe to newsletter
             </button>
           </div>
