@@ -1,3 +1,4 @@
+import React from "react";
 import { FiveBlackStars, Naira } from "../svgs/extras";
 
 const TopSeller = () => {

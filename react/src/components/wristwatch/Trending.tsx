@@ -1,3 +1,5 @@
+import React from "react";
+
 const Trending = () => {
   return (
     <div className="bg-[#faf9f6]">

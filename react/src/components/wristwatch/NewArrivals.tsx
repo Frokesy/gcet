@@ -1,3 +1,4 @@
+import React from "react";
 import { Naira } from "../svgs/extras";
 
 const NewArrivals = () => {

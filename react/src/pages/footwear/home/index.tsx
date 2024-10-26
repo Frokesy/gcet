@@ -1,3 +1,4 @@
+import React from "react";
 import Container from "../../../components/defaults/Container";
 import BestSellers from "../../../components/footwear/BestSellers";
 import Categories from "../../../components/footwear/Categories";

@@ -1,3 +1,4 @@
+import React from "react"
 import Container from "../../../components/defaults/Container"
 import BestSellers from "../../../components/sports/BestSellers"
 import Categories from "../../../components/sports/Categories"

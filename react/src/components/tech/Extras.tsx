@@ -1,3 +1,4 @@
+import React from "react"
 import { MoneyIcon, Padlock, PhoneIcon, Van } from "../svgs/extras"
 
 const Extras = () => {

@@ -1,3 +1,4 @@
+import React from "react"
 import Brands from "../../../components/clothes/Brands"
 import Categories from "../../../components/clothes/Categories"
 import Hero from "../../../components/clothes/Hero"

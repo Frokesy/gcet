@@ -1,3 +1,4 @@
+import React from "react";
 import { PlayIcon } from "../svgs/wristwatch/icons";
 
 const Hero = () => {

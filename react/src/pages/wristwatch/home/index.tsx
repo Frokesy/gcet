@@ -1,3 +1,4 @@
+import React from "react";
 import Container from "../../../components/defaults/Container";
 import Brands from "../../../components/wristwatch/Brands";
 import WatchCategories from "../../../components/wristwatch/Categories";

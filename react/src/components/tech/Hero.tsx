@@ -1,3 +1,5 @@
+import React from "react";
+
 const Hero = () => {
   return (
     <div className="pt-[10vh] relative lg:bg-[url('/assets/tech/th-one.png')] bg-no-repeat lg:min-h-screen w-[100%] pb-10 lg:pb-0">

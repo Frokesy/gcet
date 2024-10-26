@@ -1,3 +1,4 @@
+import React from "react"
 import Container from "../../../components/defaults/Container"
 import Brands from "../../../components/tech/Brands"
 import Categories from "../../../components/tech/Categories"

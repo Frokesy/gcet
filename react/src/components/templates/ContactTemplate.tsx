@@ -6,6 +6,7 @@ import {
   CoYoutube,
 } from "../svgs/contactIcons";
 import { EmailIcon, LocationIcon, Phone } from "../svgs/extras";
+import React from "react";
 
 interface ContactTemplateProps {
   themeColor: string;
