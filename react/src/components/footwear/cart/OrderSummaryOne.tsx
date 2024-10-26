@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { CheckoutIcon, CouponIcon, Naira } from "../../svgs/extras";
-import React from "react";
+
 
 interface SummaryProps {
   themeColor: string;

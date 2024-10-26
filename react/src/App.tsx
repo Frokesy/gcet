@@ -28,7 +28,7 @@ import SportsCart from "./pages/sports/cart";
 import { AnimatePresence } from "framer-motion"
 import Signup from "./pages/auth/Signup";
 import Login from "./pages/auth/Login";
-import React from "react";
+
 
 const App = () => {
   const router = createBrowserRouter([

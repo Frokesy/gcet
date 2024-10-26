@@ -7,7 +7,7 @@ import OrderComplete from "../footwear/cart/OrderComplete";
 import OrderSummaryOne from "../footwear/cart/OrderSummaryOne";
 import OrderSummaryTwo from "../footwear/cart/OrderSummaryTwo";
 import { ItemProps } from "../../pages/footwear/cart";
-import React from "react";
+
 
 interface CartTemplateProps {
   items: ItemProps[];

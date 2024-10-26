@@ -1,4 +1,4 @@
-import React from "react";
+
 import Container from "../../../components/defaults/Container";
 import CartTemplate from "../../../components/templates/CartTemplate";
 

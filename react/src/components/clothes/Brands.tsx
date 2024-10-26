@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Gucci, Nike, Prada, Zara } from "../svgs/brandIcons";
 
 const Brands = () => {

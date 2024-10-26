@@ -1,4 +1,3 @@
-import React from "react"
 import { PromotionIcon } from "../svgs/extras"
 
 const Promotions = () => {

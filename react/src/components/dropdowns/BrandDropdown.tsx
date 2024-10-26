@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Adidas, DrMartens, Hermes, NewBalance, Nike, Puma, Reebok } from "../svgs/brandIcons";
 
 const BrandDropdown = () => {

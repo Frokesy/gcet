@@ -1,4 +1,4 @@
-import React from "react";
+
 import Five from "../stars/Five";
 import FourandHalf from "../stars/FourandHalf";
 import Three from "../stars/Three";

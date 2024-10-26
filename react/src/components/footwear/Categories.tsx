@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Five from "../stars/Five";
 import { Heart, Naira } from "../svgs/extras";
-import React from "react";
+
 
 const Categories = () => {
   const items = [

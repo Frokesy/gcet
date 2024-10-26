@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import React from "react";
+
+import { NavLink } from "react-router-dom";
 
 const images = [
   "/assets/footwear/ft-one.png",
@@ -54,11 +55,11 @@ const Hero = () => {
           designed to bring out your individuality and cater to your sense of
           style.
         </p>
-        <div className="flex lg:justify-start justify-center">
+        <NavLink to="/shop" className="flex lg:justify-start justify-center">
           <button className="bg-[#000] lg:w-[40%] w-[70%] text-[#fff] lg:mt-6 mt-8 py-2 rounded-lg">
             Shop Now
           </button>
-        </div>
+        </NavLink>
       </div>
 
       <div className="lg:w-[50%] flex lg:justify-end mt-20 overflow-hidden">

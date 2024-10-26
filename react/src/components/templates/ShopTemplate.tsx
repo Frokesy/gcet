@@ -5,7 +5,7 @@ import { SearchIcon } from "../svgs/headerIcons";
 import { FC, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Product from "../footwear/Product";
-import React from "react";
+
 
 interface ShopTemplateProps {
   products: ProductProps[];

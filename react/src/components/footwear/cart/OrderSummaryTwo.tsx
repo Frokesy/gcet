@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ItemProps } from "../../../pages/footwear/cart";
 import { Bin, CouponIcon, Naira } from "../../svgs/extras";
-import React from "react";
+
 
 interface SummaryTwoProps {
   items: ItemProps[];

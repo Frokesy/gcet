@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Facebook, Instagram, Youtube } from "../svgs/extras";
 import {
   AmericanExpressCard,

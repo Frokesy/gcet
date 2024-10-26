@@ -1,4 +1,4 @@
-import React from "react";
+
 import Container from "../../../components/defaults/Container";
 import { ProductProps } from "../../../components/footwear/ShopCatalog";
 import Five from "../../../components/stars/Five";

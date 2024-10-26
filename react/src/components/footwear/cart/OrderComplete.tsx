@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Naira } from "../../svgs/extras";
 import { ItemProps } from "../../../pages/footwear/cart";
 import { FC } from "react";
-import React from "react";
+
 
 interface OrderCompleteProps {
   items: ItemProps[];

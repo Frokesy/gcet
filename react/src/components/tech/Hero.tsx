@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -12,14 +12,16 @@ const Hero = () => {
             <h2 className="lg:text-[64px] text-[32px] font-semibold">
               Stay in touch with the latest Tech
             </h2>
-            <p className="lg:text-[20px] text-[14px]">
+            <p className="lg:text-[20px] text-[14px] pb-6">
               FRIEZA Gadgets, your ultimate destination for the latest and
               greatest gadgets, where cutting-edge technology meets unbeatable
               prices.
             </p>
-            <button className="bg-[#3e4784] text-[#fff] py-3 rounded-lg w-[40%] lg:text-[16px] text-[14px] font-semibold">
-              Shop Now
-            </button>
+            <NavLink to="/tmp-5/shop" className="">
+              <button className="bg-[#3e4784] text-[#fff] py-3 rounded-lg w-[40%] lg:text-[16px] text-[14px] font-semibold">
+                Shop Now
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

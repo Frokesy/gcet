@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ItemProps } from "../../../pages/footwear/cart";
 import { Bin, Naira } from "../../svgs/extras";
-import React from "react";
+
 
 interface ShoppingCartProps {
   items: ItemProps[];

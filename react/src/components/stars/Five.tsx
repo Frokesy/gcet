@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FilledStar } from "../svgs/starIcons";
 
 const Five = () => {

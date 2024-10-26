@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Google } from "../../components/svgs/extras";
-import React from "react";
+
 
 const Signup = () => {
   return (

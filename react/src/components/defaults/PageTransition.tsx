@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FC, ReactNode } from "react";
 import ScrollToTop from "./ScrollToTop";
-import React from "react";
+
 
 interface PageTransitionProps {
   children: ReactNode;

@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 import Drawer from "./Drawer";
 import { motion } from "framer-motion";
 import Ad from "./Ad";
-import React from "react";
+
 
 interface HeaderProps {
   active: string;

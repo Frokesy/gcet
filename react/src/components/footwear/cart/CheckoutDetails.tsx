@@ -1,4 +1,4 @@
-import React from "react";
+
 import { CreditCardIcon } from "../../svgs/extras";
 
 const CheckoutDetails = () => {

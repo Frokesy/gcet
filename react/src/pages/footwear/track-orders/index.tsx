@@ -7,7 +7,7 @@ import {
   Naira,
   WhiteTick,
 } from "../../../components/svgs/extras";
-import React from "react";
+
 
 const TrackOrder = () => {
   return (

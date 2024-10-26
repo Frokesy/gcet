@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -12,9 +12,11 @@ const Hero = () => {
             With SIKO PIECES, shop for your type of time piece, be it the
             casual, sporty or luxurious piece. SIKO is here for you!
           </p>
-          <button className="bg-[#039855] text-[#fff] py-3 rounded-lg lg:w-[40%] w-[100%] lg:text-[16px] text-[14px] font-semibold">
-            Shop Now
-          </button>
+          <NavLink to="/tmp-6/shop">
+            <button className="bg-[#039855] text-[#fff] py-3 rounded-lg lg:w-[40%] w-[100%] lg:text-[16px] text-[14px] font-semibold">
+              Shop Now
+            </button>
+          </NavLink>
         </div>
       </div>
       <div className="w-[100%] mt-10">

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FiveBlueStars, Heart, Naira } from "../svgs/extras";
 
 const NewArrivals = () => {

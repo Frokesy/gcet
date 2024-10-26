@@ -1,4 +1,5 @@
-import React from "react";
+
+import { NavLink } from "react-router-dom";
 import { PlayIcon } from "../svgs/wristwatch/icons";
 
 const Hero = () => {
@@ -17,9 +18,9 @@ const Hero = () => {
         With SIKO PIECES, shop for your type of time piece, be it the casual,
         sporty or luxurious piece. SIKO is here for you!
       </p>
-      <button className="bg-[#ff4405] text-[#fff] py-2 px-10 mt-10 rounded-2xl font-semibold">
+      <NavLink to="/tmp-2/shop" className="bg-[#ff4405] text-[#fff] py-2 px-10 mt-10 rounded-2xl font-semibold">
         Find your piece
-      </button>
+      </NavLink>
 
       <div className="mt-10 flex items-center space-x-4">
         <PlayIcon />

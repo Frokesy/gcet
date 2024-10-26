@@ -1,6 +1,6 @@
 import { FC, SetStateAction } from "react";
 import { Naira } from "../svgs/extras";
-import React from "react";
+
 
 interface CatalogProps {
   setProduct: React.Dispatch<SetStateAction<ProductProps | undefined>>;

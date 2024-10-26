@@ -1,5 +1,5 @@
 import { ReactLenis } from "@studio-freight/react-lenis";
-import React from "react";
+
 
 function SmoothScroll({ children }: { children: React.ReactNode }) {
   const lenisOptions = {

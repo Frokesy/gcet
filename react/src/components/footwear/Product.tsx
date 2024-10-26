@@ -4,7 +4,7 @@ import { ArrowDown, Menu, Naira, Tick } from "../svgs/extras";
 import Five from "../stars/Five";
 import FourandHalf from "../stars/FourandHalf";
 import ThreeandHalf from "../stars/ThreeandHalf";
-import React from "react";
+
 
 interface SingleProductProps {
   product: ProductProps;
