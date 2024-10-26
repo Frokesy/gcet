@@ -240,7 +240,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
           exit="exit"
           className="absolute w-full"
         >
-          <CategoriesDropdown />
+          <CategoriesDropdown active={active} />
         </motion.div>
       )}
       {revealBrandDropdown && (
