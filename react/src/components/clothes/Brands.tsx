@@ -1,4 +1,3 @@
-
 import { Gucci, Nike, Prada, Zara } from "../svgs/brandIcons";
 
 const Brands = () => {

@@ -251,7 +251,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
           exit="exit"
           className="absolute w-full"
         >
-          <BrandDropdown />
+          <BrandDropdown active={active} />
         </motion.div>
       )}
       {openDrawer && <Drawer setOpenDrawer={setOpenDrawer} />}
