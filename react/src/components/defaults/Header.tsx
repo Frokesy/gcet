@@ -254,7 +254,7 @@ const Header: FC<HeaderProps> = ({ active }) => {
           <BrandDropdown active={active} />
         </motion.div>
       )}
-      {openDrawer && <Drawer setOpenDrawer={setOpenDrawer} />}
+      {openDrawer && <Drawer active={active} setOpenDrawer={setOpenDrawer} />}
     </div>
   );
 };

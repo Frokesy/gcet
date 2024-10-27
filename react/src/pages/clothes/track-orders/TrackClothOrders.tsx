@@ -7,38 +7,35 @@ import {
   Naira,
   WhiteTick,
 } from "../../../components/svgs/extras";
+import { ItemProps } from "../../footwear/cart";
 import { useEffect, useState } from "react";
 import { getCartItems } from "../../../../utils/idbService";
-import { ItemProps } from "../cart";
 
-const TrackOrder = () => {
-  const [cartItems, setCartItems] = useState<ItemProps[]>([]);
-  const [total, setTotal] = useState<number>();
 
-  useEffect(() => {
-    const calculateTotal = () => {
-      const total = cartItems.reduce(
-        (acc, item) => acc + parseInt(item.price) * item.quantity,
-        0
-      );
-      setTotal(total);
-    };
-    const fetchCartItems = async () => {
-      const items = await getCartItems("footwear");
-      setCartItems(items);
-    };
-    fetchCartItems();
-    calculateTotal();
-  }, [cartItems]);
-
+const TrackClothOrders = () => {
+    const [cartItems, setCartItems] = useState<ItemProps[]>([]);
+    const [total, setTotal] = useState<number>();
+  
+    useEffect(() => {
+      const calculateTotal = () => {
+        const total = cartItems.reduce(
+          (acc, item) => acc + parseInt(item.price) * item.quantity,
+          0
+        );
+        setTotal(total);
+      };
+      const fetchCartItems = async () => {
+        const items = await getCartItems("clothes");
+        setCartItems(items);
+      };
+      fetchCartItems();
+      calculateTotal();
+    }, [cartItems]);
   return (
     <Container active="footwear">
       <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
         <div className="flex space-x-6 w-[90vw] mx-auto">
-          <NavLink
-            to="/"
-            className="flex items-center cursor-pointer space-x-2"
-          >
+          <NavLink to="/tmp-4/home" className="flex items-center cursor-pointer space-x-2">
             <BackIcon />
             <p className="uppercase">Back</p>
           </NavLink>
@@ -51,9 +48,7 @@ const TrackOrder = () => {
 
         <div className="flex lg:flex-row flex-col justify-between">
           <div className="bg-[#f2f4f7] p-6 mt-10 lg:w-[40%]">
-            <h2 className="lg:text-[40px] text-[26px] font-semibold">
-              Tracking Details
-            </h2>
+            <h2 className="lg:text-[40px] text-[26px] font-semibold">Tracking Details</h2>
 
             <div className="lg:w-[80%] flex justify-between items-center mt-4">
               <h2 className="text-[#333]">Status</h2>
@@ -102,7 +97,7 @@ const TrackOrder = () => {
             <div className="mt-10">
               <h2>Order Details</h2>
               <div className="mt-3 lg:w-[90%] rounded-lg p-3 bg-[#eaecf0] space-y-3">
-                {cartItems.map((cartItem) => (
+              {cartItems.map((cartItem) => (
                   <div
                     key={cartItem.id}
                     className="flex items-center space-x-4"
@@ -118,10 +113,8 @@ const TrackOrder = () => {
                 ))}
 
                 <div className="flex space-x-20 text-[20px] pt-10">
-                  <h2>Total</h2>
-                  <p className="flex items-center">
-                    <Naira /> {total}
-                  </p>
+                    <h2>Total</h2>
+                    <p className="flex items-center"><Naira /> {total}</p>
                 </div>
               </div>
             </div>
@@ -139,4 +132,4 @@ const TrackOrder = () => {
   );
 };
 
-export default TrackOrder;
+export default TrackClothOrders;

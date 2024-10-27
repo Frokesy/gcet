@@ -5,6 +5,7 @@ import Five from "../stars/Five";
 import FourandHalf from "../stars/FourandHalf";
 import ThreeandHalf from "../stars/ThreeandHalf";
 import { addItemToCart } from "../../../utils/idbService";
+import { NavLink } from "react-router-dom";
 
 interface SingleProductProps {
   product: ProductProps;
@@ -264,9 +265,48 @@ const Product: FC<SingleProductProps> = ({ product, active }) => {
         </div>
         <div className="lg:w-[50%]">
           <div className="w-[70%] mx-auto mt-6">
-            <button className="w-[100%] py-4 bg-[#000] text-[#fff] rounded-lg font-semibold">
-              View Cart
-            </button>
+            {active === "footwear" && (
+              <NavLink to="/cart">
+                <button className="w-[100%] py-4 bg-[#000] text-[#fff] rounded-lg font-semibold">
+                  View Cart
+                </button>
+              </NavLink>
+            )}
+            {active === "wristwatch" && (
+              <NavLink to="/tmp-2/cart">
+                <button className="w-[100%] py-4 bg-[#000] text-[#fff] rounded-lg font-semibold">
+                  View Cart
+                </button>
+              </NavLink>
+            )}
+            {active === "furniture" && (
+              <NavLink to="/tmp-3/cart">
+                <button className="w-[100%] py-4 bg-[#000] text-[#fff] rounded-lg font-semibold">
+                  View Cart
+                </button>
+              </NavLink>
+            )}
+            {active === "clothes" && (
+              <NavLink to="/tmp-4/cart">
+                <button className="w-[100%] py-4 bg-[#000] text-[#fff] rounded-lg font-semibold">
+                  View Cart
+                </button>
+              </NavLink>
+            )}
+            {active === "tech" && (
+              <NavLink to="/tmp-5/cart">
+                <button className="w-[100%] py-4 bg-[#000] text-[#fff] rounded-lg font-semibold">
+                  View Cart
+                </button>
+              </NavLink>
+            )}
+            {active === "sports" && (
+              <NavLink to="/tmp-6/cart">
+                <button className="w-[100%] py-4 bg-[#000] text-[#fff] rounded-lg font-semibold">
+                  View Cart
+                </button>
+              </NavLink>
+            )}
           </div>
           <div className="bg-[#f9fafb] p-3 rounded-xl mt-14">
             <h2 className="text-[24px] font-semibold">Write a review</h2>

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="bg-[#f7f7f7] pt-[20vh] pb-10">
+    <div className="bg-[#f7f7f7] lg:pt-[20vh] pt-[15vh] pb-10">
       <div className="w-[90vw] mx-auto flex lg:flex-row flex-col-reverse justify-between">
         <div className="lg:w-[35%] space-y-4">
           <h2 className="lg:text-[50px] text-[32px] mt-10 lg:mt-0 font-semibold uppercase">

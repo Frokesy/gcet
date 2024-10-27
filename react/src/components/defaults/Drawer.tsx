@@ -6,6 +6,7 @@ import { ArrowDown } from "../svgs/extras";
 
 interface DrawerProps {
   setOpenDrawer: React.Dispatch<SetStateAction<boolean>>;
+  active: string;
 }
 
 const dropdownVariants = {
@@ -14,7 +15,7 @@ const dropdownVariants = {
   exit: { opacity: 0, y: -10, transition: { duration: 0.6 } },
 };
 
-const Drawer: FC<DrawerProps> = ({ setOpenDrawer }) => {
+const Drawer: FC<DrawerProps> = ({ setOpenDrawer, active }) => {
   //   const [revealCategoryDropdown, setRevealCategoryDropdown] =
   //     useState<boolean>(false);
   //   const [revealBrandDropdown, setRevealBrandDropdown] =
@@ -40,9 +41,9 @@ const Drawer: FC<DrawerProps> = ({ setOpenDrawer }) => {
             <div className="flex justify-end text-[14px]">
               <p
                 onClick={() => setOpenDrawer(false)}
-                className="border border-[#808080] flex items-center justify-center h-8 w-8 rounded-full"
+                className="border border-[#808080] flex items-center justify-center h-6 w-6 rounded-full"
               >
-                X
+                x
               </p>
             </div>
             <div className="space-y-4">
@@ -82,9 +83,58 @@ const Drawer: FC<DrawerProps> = ({ setOpenDrawer }) => {
                 <ArrowDown />
               </div>
             </div>
-            <NavLink to="/contact">Contact Us</NavLink>
-            <p>Track Delivery</p>
-            <NavLink to="/cart">Cart</NavLink>
+            {active === "footwear" && <NavLink to="/shop">Shop</NavLink>}
+            {active === "wristwatch" && (
+              <NavLink to="/tmp-2/shop">Shop</NavLink>
+            )}
+            {active === "furniture" && <NavLink to="/tmp-3/shop">Shop</NavLink>}
+            {active === "clothes" && <NavLink to="/tmp-4/shop">Shop</NavLink>}
+            {active === "tech" && <NavLink to="/tmp-5/shop">Shop</NavLink>}
+            {active === "sports" && <NavLink to="/tmp-6/shop">Shop</NavLink>}
+            {active === "footwear" && <NavLink to="/cart">Cart</NavLink>}
+            {active === "wristwatch" && (
+              <NavLink to="/tmp-2/cart">Cart</NavLink>
+            )}
+            {active === "furniture" && <NavLink to="/tmp-3/cart">Cart</NavLink>}
+            {active === "clothes" && <NavLink to="/tmp-4/cart">Cart</NavLink>}
+            {active === "tech" && <NavLink to="/tmp-5/cart">Cart</NavLink>}
+            {active === "sports" && <NavLink to="/tmp-6/cart">Cart</NavLink>}
+            {active === "footwear" && (
+              <NavLink to="/contact">Contact us</NavLink>
+            )}
+            {active === "wristwatch" && (
+              <NavLink to="/tmp-2/contact">Contact us</NavLink>
+            )}
+            {active === "furniture" && (
+              <NavLink to="/tmp-3/contact">Contact us</NavLink>
+            )}
+            {active === "clothes" && (
+              <NavLink to="/tmp-4/contact">Contact us</NavLink>
+            )}
+            {active === "tech" && (
+              <NavLink to="/tmp-5/contact">Contact us</NavLink>
+            )}
+            {active === "sports" && (
+              <NavLink to="/tmp-6/contact">Contact us</NavLink>
+            )}
+            {active === "footwear" && (
+              <NavLink to="/track-order">Track Delivery</NavLink>
+            )}
+            {active === "wristwatch" && (
+              <NavLink to="/tmp-2/track-order">Track Delivery</NavLink>
+            )}
+            {active === "furniture" && (
+              <NavLink to="/tmp-3/track-order">Track Delivery</NavLink>
+            )}
+            {active === "clothes" && (
+              <NavLink to="/tmp-4/track-order">Track Delivery</NavLink>
+            )}
+            {active === "tech" && (
+              <NavLink to="/tmp-5/track-order">Track Delivery</NavLink>
+            )}
+            {active === "sports" && (
+              <NavLink to="/tmp-6/track-order">Track Delivery</NavLink>
+            )}
             <NavLink to="/profile">Profile</NavLink>
           </motion.div>
         </div>
