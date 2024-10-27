@@ -1,4 +1,3 @@
-
 import Container from "../../../components/defaults/Container";
 import { ProductProps } from "../../../components/footwear/ShopCatalog";
 import Five from "../../../components/stars/Five";
@@ -13,6 +12,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 2,
@@ -21,6 +21,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 3,
@@ -29,6 +30,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 4,
@@ -37,6 +39,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 5,
@@ -45,6 +48,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 6,
@@ -53,6 +57,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 7,
@@ -61,6 +66,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 8,
@@ -69,6 +75,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 9,
@@ -77,6 +84,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 10,
@@ -85,6 +93,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 11,
@@ -93,6 +102,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 12,
@@ -101,6 +111,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 13,
@@ -109,6 +120,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 14,
@@ -117,6 +129,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 15,
@@ -125,6 +138,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 16,
@@ -133,6 +147,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 17,
@@ -141,6 +156,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 18,
@@ -149,6 +165,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 19,
@@ -157,6 +174,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
     {
       id: 20,
@@ -165,6 +183,7 @@ const WristwatchShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "watch",
+      quantity: 1,
     },
   ];
 

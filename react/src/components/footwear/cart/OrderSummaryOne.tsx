@@ -1,12 +1,14 @@
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import { CheckoutIcon, CouponIcon, Naira } from "../../svgs/extras";
 
 
 interface SummaryProps {
   themeColor: string;
+  total: number;
+  setActiveTab: Dispatch<SetStateAction<string>>;
 }
 
-const OrderSummaryOne: FC<SummaryProps> = ({ themeColor }) => {
+const OrderSummaryOne: FC<SummaryProps> = ({ themeColor, total, setActiveTab }) => {
   return (
     <div className="lg:w-[30%] border border-[#ccc] lg:rounded-2xl p-6">
       <h2 className="text-[24px] font-semibold">Order Summary</h2>
@@ -16,7 +18,7 @@ const OrderSummaryOne: FC<SummaryProps> = ({ themeColor }) => {
           <h2>Subtotal</h2>
           <p className="flex items-center font-semibold space-x-2 text-[14px]">
             <Naira />
-            80,000.00
+            {total}
           </p>
         </div>
         <div className="flex justify-between p-3 rounded-lg border border-[#333]">
@@ -27,7 +29,7 @@ const OrderSummaryOne: FC<SummaryProps> = ({ themeColor }) => {
               name="deliveryFee"
               id="deliveryFee"
             />
-            <h2>Subtotal</h2>
+            <h2>Delivery Fee</h2>
           </div>
           <p className="flex items-center font-semibold space-x-2 text-[14px]">
             <Naira />
@@ -49,7 +51,7 @@ const OrderSummaryOne: FC<SummaryProps> = ({ themeColor }) => {
           <h2>Total</h2>
           <p className="flex items-center font-semibold space-x-2 text-[14px]">
             <Naira />
-            100,000.00
+            {total + 5000}
           </p>
         </div>
 
@@ -67,7 +69,7 @@ const OrderSummaryOne: FC<SummaryProps> = ({ themeColor }) => {
           </div>
         </div>
 
-        <button className={`lg:py-6 py-4 w-[100%] bg-[${themeColor}] text-[#fff] space-x-3 flex items-center rounded-lg justify-center font-semibold`}>
+        <button onClick={() => setActiveTab("checkout")} className={`lg:py-6 py-4 w-[100%] bg-[${themeColor}] text-[#fff] space-x-3 flex items-center rounded-lg justify-center font-semibold`}>
           <p>Proceed to Checkout</p>
           <CheckoutIcon />
         </button>

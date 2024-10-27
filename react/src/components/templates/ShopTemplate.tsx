@@ -273,7 +273,7 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
           </div>
         </div>
       ) : (
-        <Product product={product} />
+        <Product active={active} product={product} />
       )}
     </div>
   );

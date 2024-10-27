@@ -1,16 +1,19 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ProductProps } from "./ShopCatalog";
-import { ArrowDown, Menu, Naira, Tick } from "../svgs/extras";
+import { ArrowDown, Greentick, Menu, Naira, Tick } from "../svgs/extras";
 import Five from "../stars/Five";
 import FourandHalf from "../stars/FourandHalf";
 import ThreeandHalf from "../stars/ThreeandHalf";
-
+import { addItemToCart } from "../../../utils/idbService";
 
 interface SingleProductProps {
   product: ProductProps;
+  active: string;
 }
 
-const Product: FC<SingleProductProps> = ({ product }) => {
+const Product: FC<SingleProductProps> = ({ product, active }) => {
+  const [addedtoCart, setAddedToCart] = useState<boolean>(false);
+  const [quantity, setQuantity] = useState(product.quantity);
   const reviews = [
     {
       id: 1,
@@ -70,6 +73,34 @@ const Product: FC<SingleProductProps> = ({ product }) => {
       price: "200,000.00",
     },
   ];
+
+  const incrementQuantity = async () => {
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+  };
+
+  const decrementQuantity = async () => {
+    if (quantity > 1) {
+      const newQuantity = quantity - 1;
+      setQuantity(newQuantity);
+    }
+  };
+
+  const handleAddToCart = async () => {
+    const newItem = {
+      id: Math.floor(1000000000 + Math.random() * 9000000000),
+      name: product.name,
+      price: product.price,
+      productImg: product.productImg,
+      quantity: quantity,
+      templateId: active,
+    };
+
+    await addItemToCart(newItem);
+    setAddedToCart(true);
+    setTimeout(() => setAddedToCart(false), 1000);
+  };
+
   return (
     <div>
       <div className="mt-6 flex lg:flex-row flex-col justify-between">
@@ -163,16 +194,27 @@ const Product: FC<SingleProductProps> = ({ product }) => {
           </div>
           <div className="flex justify-between">
             <div className="flex items-center space-x-4">
-              <p className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#000] text-[#fff]">
+              <p
+                className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#000] text-[#fff] cursor-pointer"
+                onClick={decrementQuantity}
+              >
                 -
               </p>
-              <p>1</p>
-              <p className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#000] text-[#fff]">
+              <p>{quantity}</p>
+              <p
+                className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#000] text-[#fff] cursor-pointer"
+                onClick={incrementQuantity}
+              >
                 +
               </p>
             </div>
-            <button className="w-[65%] py-3 bg-[#000] text-[#fff] rounded-lg font-semibold">
-              Add to Cart
+
+            <button
+              onClick={handleAddToCart}
+              className="w-[65%] flex items-center space-x-3 justify-center py-3 bg-[#000] text-[#fff] rounded-lg font-semibold"
+            >
+              <span>Add to Cart</span>
+              {addedtoCart && <Greentick />}
             </button>
           </div>
         </div>

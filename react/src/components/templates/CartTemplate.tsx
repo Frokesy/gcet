@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BackIcon, GreenTick } from "../svgs/extras";
 import ShoppingCart from "../footwear/cart/ShoppingCart";
@@ -7,16 +7,31 @@ import OrderComplete from "../footwear/cart/OrderComplete";
 import OrderSummaryOne from "../footwear/cart/OrderSummaryOne";
 import OrderSummaryTwo from "../footwear/cart/OrderSummaryTwo";
 import { ItemProps } from "../../pages/footwear/cart";
-
+import { getCartItems } from "../../../utils/idbService";
 
 interface CartTemplateProps {
-  items: ItemProps[];
+  items?: ItemProps[];
   active: string;
   themeColor: string;
 }
 
-const CartTemplate: FC<CartTemplateProps> = ({ items, active, themeColor }) => {
+const CartTemplate: FC<CartTemplateProps> = ({ active, themeColor }) => {
   const [activeTab, setActiveTab] = useState<string>("cart");
+  const [total, setTotal] = useState(0);
+
+  const [cartItems, setCartItems] = useState<ItemProps[]>([]);
+
+  const handleTotalUpdate = (newTotal: number) => {
+    setTotal(newTotal);
+  };
+
+  useEffect(() => {
+    const fetchCartItems = async () => {
+      const items = await getCartItems(active);
+      setCartItems(items);
+    };
+    fetchCartItems();
+  }, [active]);
 
   return (
     <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
@@ -155,13 +170,27 @@ const CartTemplate: FC<CartTemplateProps> = ({ items, active, themeColor }) => {
             </div>
           </div>
 
-          {activeTab === "cart" && <ShoppingCart items={items} />}
-          {activeTab === "checkout" && <CheckoutDetails />}
-          {activeTab === "order-complete" && <OrderComplete items={items} />}
+          {activeTab === "cart" && (
+            <ShoppingCart items={cartItems} onUpdateTotal={handleTotalUpdate} />
+          )}
+          {activeTab === "checkout" && (
+            <CheckoutDetails setActiveTab={setActiveTab} />
+          )}
+          {activeTab === "order-complete" && (
+            <OrderComplete items={cartItems} />
+          )}
         </div>
 
-        {activeTab === "cart" && <OrderSummaryOne themeColor={themeColor} />}
-        {activeTab === "checkout" && <OrderSummaryTwo items={items} />}
+        {activeTab === "cart" && (
+          <OrderSummaryOne
+            setActiveTab={setActiveTab}
+            total={total}
+            themeColor={themeColor}
+          />
+        )}
+        {activeTab === "checkout" && (
+          <OrderSummaryTwo items={cartItems} total={total} />
+        )}
       </div>
     </div>
   );

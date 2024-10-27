@@ -1,7 +1,11 @@
-
+import { Dispatch, FC, SetStateAction } from "react";
 import { CreditCardIcon } from "../../svgs/extras";
 
-const CheckoutDetails = () => {
+interface DetailsProps {
+  setActiveTab: Dispatch<SetStateAction<string>>;
+}
+
+const CheckoutDetails: FC<DetailsProps> = ({ setActiveTab }) => {
   return (
     <div className="mt-10 px-6 lg:px-0">
       <h2 className="text-[24px] font-semibold">Checkout Details</h2>
@@ -203,7 +207,12 @@ const CheckoutDetails = () => {
           </div>
         </div>
 
-        <button className="bg-[#667085] text-[#fff] py-4 font-semibold rounded-lg">Place Order</button>
+        <button
+          onClick={() => setActiveTab("cart")}
+          className="bg-[#667085] text-[#fff] py-4 font-semibold rounded-lg"
+        >
+          Place Order
+        </button>
       </div>
     </div>
   );

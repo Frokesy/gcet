@@ -13,6 +13,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sneakers",
+      quantity: 1,
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sneakers",
+      quantity: 1,
     },
     {
       id: 3,
@@ -29,6 +31,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sneakers",
+      quantity: 1,
     },
     {
       id: 4,
@@ -37,6 +40,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sneakers",
+      quantity: 1,
     },
     {
       id: 5,
@@ -45,6 +49,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 6,
@@ -53,6 +58,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 7,
@@ -61,6 +67,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 8,
@@ -69,6 +76,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 9,
@@ -77,6 +85,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sports",
+      quantity: 1,
     },
     {
       id: 10,
@@ -85,6 +94,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sports",
+      quantity: 1,
     },
     {
       id: 11,
@@ -93,6 +103,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sports",
+      quantity: 1,
     },
     {
       id: 12,
@@ -101,6 +112,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sports",
+      quantity: 1,
     },
     {
       id: 13,
@@ -109,6 +121,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sneakers",
+      quantity: 1,
     },
     {
       id: 14,
@@ -117,6 +130,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 15,
@@ -125,6 +139,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 16,
@@ -133,6 +148,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 17,
@@ -141,6 +157,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "shoes",
+      quantity: 1,
     },
     {
       id: 18,
@@ -149,6 +166,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sports",
+      quantity: 1,
     },
     {
       id: 19,
@@ -157,6 +175,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sports",
+      quantity: 1,
     },
     {
       id: 20,
@@ -165,6 +184,7 @@ const FootwearShop = () => {
       ratingIcon: <Five />,
       price: "200,000.00",
       category: "sports",
+      quantity: 1,
     },
   ];
 

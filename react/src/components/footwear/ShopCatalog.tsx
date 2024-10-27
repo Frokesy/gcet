@@ -14,6 +14,7 @@ export interface ProductProps {
   ratingIcon: React.ReactElement;
   price: string;
   category: string;
+  quantity: number;
 }
 
 const ShopCatalog: FC<CatalogProps> = ({ setProduct, items }) => {

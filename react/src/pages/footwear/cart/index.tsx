@@ -7,40 +7,14 @@ export interface ItemProps {
   productImg: string;
   name: string;
   price: string;
+  quantity: number;
 }
 
 const FootwearCart = () => {
 
-  const items: ItemProps[] = [
-    {
-      id: 1,
-      productImg: "/assets/footwear/ft-two.png",
-      name: "Nike Zoom",
-      price: "200,000.00",
-    },
-    {
-      id: 2,
-      productImg: "/assets/footwear/ft-three.png",
-      name: "Dr Martens",
-      price: "200,000.00",
-    },
-    {
-      id: 3,
-      productImg: "/assets/footwear/ft-four.png",
-      name: "London Loafers",
-      price: "200,000.00",
-    },
-    {
-      id: 4,
-      productImg: "/assets/footwear/ft-five.png",
-      name: "Nike Air max 0s",
-      price: "200,000.00",
-    },
-  ];
-
   return (
     <Container active="footwear">
-      <CartTemplate items={items} active="footwear" themeColor="#000" />
+      <CartTemplate active="footwear" themeColor="#000" />
     </Container>
   );
 };
