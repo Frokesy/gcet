@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "../views/footwear/Home.vue";
-import WristwatchHome from "../views/wristwatch/Home.vue"
-import FurnitureHome from "../views/furniture/Home.vue"
+import WristwatchHome from "../views/wristwatch/Home.vue";
+import FurnitureHome from "../views/furniture/Home.vue";
+import ClothesHome from "../views/clothes/Home.vue";
 
 const routes = [
     { path: "/", name: "Home", component: Home },
@@ -12,6 +13,10 @@ const routes = [
 
     //furniture template routes
     { path: "/tmp-3/home", name: "FurnitureHome", component: FurnitureHome },
+
+    //clothes template routes
+    { path: "/tmp-4/home", name: "ClothesHome", component: ClothesHome },
+
     //  //footwear template routes
     //  { path: "/", element: <FootwearHome /> },
     //  { path: "/contact", element: <Contact /> },
@@ -33,8 +38,6 @@ const routes = [
     //  { path: "/tmp-3/cart", element: <FurnitureCart /> },
     //  { path: "/tmp-3/track-order", element: <TrackFurnitureOrders /> },
 
-    //  //clothes template routes
-    //  { path: "/tmp-4/home", element: <ClothesHome /> },
     //  { path: "/tmp-4/contact", element: <ClothesContact /> },
     //  { path: "/tmp-4/shop", element: <ClothesShop /> },
     //  { path: "/tmp-4/cart", element: <ClothesCart /> },
