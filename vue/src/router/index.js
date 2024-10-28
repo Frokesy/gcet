@@ -5,6 +5,8 @@ import WristwatchHome from "../views/wristwatch/Home.vue";
 import FurnitureHome from "../views/furniture/Home.vue";
 import ClothesHome from "../views/clothes/Home.vue";
 import TechHome from "../views/tech/Home.vue"
+import SportsHome from "../views/sports/Home.vue"
+
 const routes = [
     { path: "/", name: "Home", component: Home },
 
@@ -19,6 +21,10 @@ const routes = [
 
     //tech template routes
     { path: "/tmp-5/home", name: "TechHome", component: TechHome },
+
+    //sports template routes
+    { path: "/tmp-6/home", name: "SportsHome", component: SportsHome },
+
 
     //  //footwear template routes
     //  { path: "/", element: <FootwearHome /> },
@@ -51,8 +57,6 @@ const routes = [
     //  { path: "/tmp-5/cart", element: <TechCart /> },
     //  { path: "/tmp-5/track-order", element: <TrackTechOrders /> },
 
-    //  //sports template routes
-    //  { path: "/tmp-6/home", element: <SportsHome /> },
     //  { path: "/tmp-6/contact", element: <SportsContact /> },
     //  { path: "/tmp-6/shop", element: <SportsShop /> },
     //  { path: "/tmp-6/cart", element: <SportsCart /> },
