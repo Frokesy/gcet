@@ -1,4 +1,11 @@
-<template>
+<script setup>
+import Header from '../../components/defaults/Header.vue'
+import Hero from "../../components/footwear/Hero.vue"
+</script>
 
-    <h2>Hello world</h2>
+<template>
+    <Header active="footwear" />
+    <div>
+        <Hero />
+    </div>
 </template>

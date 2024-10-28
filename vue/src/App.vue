@@ -1,11 +1,5 @@
-<script setup>
-import Header from './components/defaults/Header.vue'
-</script>
-
 <template>
   <div id="app">
-    <Header active="footwear" />
-
     <main>
       <router-view />
     </main>
@@ -17,6 +11,4 @@ import Header from './components/defaults/Header.vue'
 </template>
 
 
-<style scoped>
-
-</style>
+<style scoped></style>
