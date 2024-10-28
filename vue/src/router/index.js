@@ -4,7 +4,7 @@ import Home from "../views/footwear/Home.vue";
 import WristwatchHome from "../views/wristwatch/Home.vue";
 import FurnitureHome from "../views/furniture/Home.vue";
 import ClothesHome from "../views/clothes/Home.vue";
-
+import TechHome from "../views/tech/Home.vue"
 const routes = [
     { path: "/", name: "Home", component: Home },
 
@@ -16,6 +16,9 @@ const routes = [
 
     //clothes template routes
     { path: "/tmp-4/home", name: "ClothesHome", component: ClothesHome },
+
+    //tech template routes
+    { path: "/tmp-5/home", name: "TechHome", component: TechHome },
 
     //  //footwear template routes
     //  { path: "/", element: <FootwearHome /> },
@@ -43,8 +46,6 @@ const routes = [
     //  { path: "/tmp-4/cart", element: <ClothesCart /> },
     //  { path: "/tmp-4/track-order", element: <TrackClothOrders /> },
 
-    //  //tech template routes
-    //  { path: "/tmp-5/home", element: <TechHome /> },
     //  { path: "/tmp-5/contact", element: <TechContact /> },
     //  { path: "/tmp-5/shop", element: <TechShop /> },
     //  { path: "/tmp-5/cart", element: <TechCart /> },
