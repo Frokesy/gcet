@@ -1,4 +1,3 @@
-import React from 'react'
 import { EmptyStar, FilledStar, HalfStar } from '../svgs/starIcons'
 
 const ThreeandHalf = () => {
