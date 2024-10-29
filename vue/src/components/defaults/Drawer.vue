@@ -70,46 +70,46 @@
                     <router-link v-if="props.active === 'sports'" to="/tmp-6/cart">
                         Cart
                     </router-link>
-                    <router-link v-if="props.active === 'footwear'" to="/footwear/contact"
+                    <router-link v-if="props.active === 'footwear'" to="/contact"
                         class="hover:text-[#363f72] hover:font-semibold">
                         Contact Us
                     </router-link>
-                    <router-link v-if="props.active === 'wristwatch'" to="/wristwatch/contact"
+                    <router-link v-if="props.active === 'wristwatch'" to="/tmp-2/contact"
                         class="hover:text-[#363f72] hover:font-semibold">
                         Contact Us
                     </router-link>
-                    <router-link v-if="props.active === 'furniture'" to="/furniture/contact"
+                    <router-link v-if="props.active === 'furniture'" to="/tmp-3/contact"
                         class="hover:text-[#363f72] hover:font-semibold">
                         Contact Us
                     </router-link>
-                    <router-link v-if="props.active === 'clothes'" to="/clothes/contact"
+                    <router-link v-if="props.active === 'clothes'" to="/tmp-4/contact"
                         class="hover:text-[#363f72] hover:font-semibold">
                         Contact Us
                     </router-link>
-                    <router-link v-if="props.active === 'tech'" to="/tech/contact"
+                    <router-link v-if="props.active === 'tech'" to="/tmp-5/contact"
                         class="hover:text-[#363f72] hover:font-semibold">
                         Contact Us
                     </router-link>
-                    <router-link v-if="props.active === 'sports'" to="/sports/contact"
+                    <router-link v-if="props.active === 'sports'" to="/tmp-6/contact"
                         class="hover:text-[#363f72] hover:font-semibold">
                         Contact Us
                     </router-link>
 
-                    <router-link v-if="props.active === 'footwear'" to="/footwear/track-order">
+                    <router-link v-if="props.active === 'footwear'" to="/track-order">
                         Track Delivery
                     </router-link>
-                    <router-link v-if="props.active === 'wristwatch'" to="/wristwatch/track-order">
+                    <router-link v-if="props.active === 'wristwatch'" to="/tmp-2/track-order">
                         Track Delivery
                     </router-link>
-                    <router-link v-if="props.active === 'furniture'" to="/furniture/track-order"> Track Delivery
+                    <router-link v-if="props.active === 'furniture'" to="/tmp-3/track-order"> Track Delivery
                     </router-link>
-                    <router-link v-if="props.active === 'clothes'" to="/clothes/track-order">
+                    <router-link v-if="props.active === 'clothes'" to="/tmp-4/track-order">
                         Track Delivery
                     </router-link>
-                    <router-link v-if="props.active === 'tech'" to="/tech/track-order">
+                    <router-link v-if="props.active === 'tech'" to="/tmp-5/track-order">
                         Track Delivery
                     </router-link>
-                    <router-link v-if="props.active === 'sports'" to="/sports/track-order">
+                    <router-link v-if="props.active === 'sports'" to="/tmp-6/track-order">
                         Track Delivery
                     </router-link>
                     <router-link to="/profile">Profile</router-link>
