@@ -2,7 +2,6 @@
 import { ref, defineProps } from 'vue';
 import { useRouter } from 'vue-router';
 
-// Icons
 import AccountIcon from "../icons/AccountIcon.vue";
 import CartIcon from "../icons/CartIcon.vue";
 import CaretDown from "../icons/CaretDown.vue";
@@ -16,7 +15,6 @@ import HomeDropdown from '../dropdowns/HomeDropdown.vue';
 import Drawer from './Drawer.vue';
 import Ad from './Ad.vue';
 
-// Props
 const props = defineProps({
   active: {
     type: String,
@@ -24,24 +22,19 @@ const props = defineProps({
   }
 });
 
-// State management
 const revealCategoryDropdown = ref(false);
 const revealBrandDropdown = ref(false);
 const revealHomeDropdown = ref(false);
 const openDrawer = ref(false);
 const closeAd = ref(false);
 
-// Router instance
 const router = useRouter();
 
-// Toggle functions
 function toggleDropdown(target) {
   revealHomeDropdown.value = target === 'home' ? !revealHomeDropdown.value : false;
   revealCategoryDropdown.value = target === 'category' ? !revealCategoryDropdown.value : false;
   revealBrandDropdown.value = target === 'brand' ? !revealBrandDropdown.value : false;
 }
-
-console.log(props.active)
 
 </script>
 
@@ -50,13 +43,11 @@ console.log(props.active)
     <Ad v-if="!closeAd" @close="closeAd = true" />
 
     <div class="w-[90vw] mx-auto py-3 flex justify-between items-center">
-      <!-- Logo and Links -->
       <div class="flex items-center space-x-10">
         <router-link to="/">
           <img src="/assets/logo.png" alt="logo" class="max-w-[48px] max-h-[48px]" />
         </router-link>
 
-        <!-- Desktop Dropdown Links -->
         <div class="lg:flex hidden space-x-8">
           <div @click="toggleDropdown('home')"
             class="flex items-center space-x-2 cursor-pointer hover:text-[#363f72] hover:font-semibold">
@@ -103,12 +94,10 @@ console.log(props.active)
         </div>
       </div>
 
-      <!-- Mobile Hamburger Icon -->
       <div class="lg:hidden block" @click="openDrawer = true">
         <MobileHamburger />
       </div>
 
-      <!-- Desktop Icons -->
       <div class="lg:flex hidden items-center space-x-8">
         <div class="input border flex items-center rounded-full py-1.5 px-5 space-x-3">
           <SearchIcon />
@@ -159,7 +148,6 @@ console.log(props.active)
       </div>
     </div>
 
-    <!-- Dropdowns -->
     <transition name="fade" mode="out-in">
       <HomeDropdown v-if="revealHomeDropdown" />
     </transition>
@@ -170,7 +158,6 @@ console.log(props.active)
       <BrandDropdown v-if="revealBrandDropdown" :active="props.active" />
     </transition>
 
-    <!-- Drawer -->
     <Drawer v-if="openDrawer" :active="props.active" @close="openDrawer = false" :isDrawerOpen="openDrawer" />
   </div>
 </template>

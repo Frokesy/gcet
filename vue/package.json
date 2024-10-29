@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^11.11.10",
+    "idb": "^8.0.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
