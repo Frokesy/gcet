@@ -67,27 +67,27 @@ function toggleDropdown(target) {
             <CaretDown />
           </div>
 
-          <router-link v-if="props.active === 'footwear'" to="/footwear/contact"
+          <router-link v-if="props.active === 'footwear'" to="/contact"
             class="hover:text-[#363f72] hover:font-semibold">
             Contact Us
           </router-link>
-          <router-link v-if="props.active === 'wristwatch'" to="/wristwatch/contact"
+          <router-link v-if="props.active === 'wristwatch'" to="/tmp-2/contact"
             class="hover:text-[#363f72] hover:font-semibold">
             Contact Us
           </router-link>
-          <router-link v-if="props.active === 'furniture'" to="/furniture/contact"
+          <router-link v-if="props.active === 'furniture'" to="/tmp-3/contact"
             class="hover:text-[#363f72] hover:font-semibold">
             Contact Us
           </router-link>
-          <router-link v-if="props.active === 'clothes'" to="/clothes/contact"
+          <router-link v-if="props.active === 'clothes'" to="/tmp-4/contact"
             class="hover:text-[#363f72] hover:font-semibold">
             Contact Us
           </router-link>
-          <router-link v-if="props.active === 'tech'" to="/tech/contact"
+          <router-link v-if="props.active === 'tech'" to="/tmp-5/contact"
             class="hover:text-[#363f72] hover:font-semibold">
             Contact Us
           </router-link>
-          <router-link v-if="props.active === 'sports'" to="/sports/contact"
+          <router-link v-if="props.active === 'sports'" to="/tmp-6/contact"
             class="hover:text-[#363f72] hover:font-semibold">
             Contact Us
           </router-link>

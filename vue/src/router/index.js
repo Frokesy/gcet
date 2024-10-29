@@ -23,6 +23,9 @@ import ClothesShop from "../views/clothes/Shop.vue"
 import TechShop from "../views/tech/Shop.vue"
 import SportsShop from "../views/sports/Shop.vue"
 
+//contact components
+import SportsContact from "../views/sports/Contact.vue"
+
 
 const routes = [
     { path: "/", name: "Home", component: Home },
@@ -57,6 +60,7 @@ const routes = [
     { path: "/tmp-6/home", name: "SportsHome", component: SportsHome },
     { path: "/tmp-6/cart", name: "SportsCart", component: SportsCart },
     { path: "/tmp-6/shop", name: "SportsShop", component: SportsShop },
+    { path: "/tmp-6/contact", name: "SportsContact", component: SportsContact },
 
 
 
@@ -88,7 +92,7 @@ const routes = [
     //  { path: "/tmp-5/cart", element: <TechCart /> },
     //  { path: "/tmp-5/track-order", element: <TrackTechOrders /> },
 
-    //  { path: "/tmp-6/contact", element: <SportsContact /> },
+
     //  { path: "/tmp-6/shop", element: <SportsShop /> },
     //  { path: "/tmp-6/cart", element: <SportsCart /> },
     //  { path: "/tmp-6/track-order", element: <TrackSportsOrders /> },

@@ -6,6 +6,6 @@ import Footer from "../../components/defaults/Footer.vue"
 
 <template>
     <Header active="clothes" />
-    <CartTemplate active="clothes" themeColor="#000" />
+    <CartTemplate active="clothes" themeColor="#553a32" />
     <Footer active="clothes" />
 </template>
