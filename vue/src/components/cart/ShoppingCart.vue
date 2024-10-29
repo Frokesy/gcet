@@ -4,7 +4,7 @@
             <h2>Loading Cart Items...</h2>
         </div>
         <div v-if="items.length > 0">
-            <div v-for="item in items" :key="item.id" class="flex justify-between border-b-2 border-[#ccc] pb-4 px-6">
+            <div v-for="item in items" :key="item.id" class="flex justify-between border-b-2 border-[#ccc] pb-4 px-6 pt-4">
                 <div class="flex items-center space-x-6">
                     <img :src="item.productImg" :alt="item.name"
                         class="lg:w-[160px] w-[80px] lg:h-[115px] h-[57px] object-cover" />
