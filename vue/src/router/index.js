@@ -25,36 +25,44 @@ import SportsShop from "../views/sports/Shop.vue"
 
 //contact components
 import SportsContact from "../views/sports/Contact.vue"
+import TechContact from "../views/tech/Contact.vue"
+import ClothesContact from "../views/clothes/Contact.vue"
+import FurnitureContact from "../views/furniture/Contact.vue"
+import FootwearContact from "../views/footwear/Contact.vue"
+import WristwatchContact from "../views/wristwatch/Contact.vue"
 
+
+import AccountProfile from "../views/profile/AccountProfile.vue"
 
 const routes = [
     { path: "/", name: "Home", component: Home },
     { path: "/cart", name: "FootwearCart", component: FootwearCart },
     { path: "/shop", name: "FootwearShop", component: FootwearShop },
+    { path: "/contact", name: "FootwearContact", component: FootwearContact },
 
     //wristwatch template routes
     { path: "/tmp-2/home", name: "WristwatchHome", component: WristwatchHome },
     { path: "/tmp-2/cart", name: "WristwatchCart", component: WristwatchCart },
     { path: "/tmp-2/shop", name: "WristwatchShop", component: WristwatchShop },
-
+    { path: "/tmp-2/contact", name: "WristwatchContact", component: WristwatchContact },
 
     //furniture template routes
     { path: "/tmp-3/home", name: "FurnitureHome", component: FurnitureHome },
     { path: "/tmp-3/cart", name: "FurnitureCart", component: FurnitureCart },
     { path: "/tmp-3/shop", name: "FootwearFurnitureShopShop", component: FurnitureShop },
-
+    { path: "/tmp-3/contact", name: "FurnitureContact", component: FurnitureContact },
 
     //clothes template routes
     { path: "/tmp-4/home", name: "ClothesHome", component: ClothesHome },
     { path: "/tmp-4/cart", name: "ClothesCart", component: ClothesCart },
     { path: "/tmp-4/shop", name: "ClothesShop", component: ClothesShop },
-
+    { path: "/tmp-4/contact", name: "ClothesContact", component: ClothesContact },
 
     //tech template routes
     { path: "/tmp-5/home", name: "TechHome", component: TechHome },
     { path: "/tmp-5/cart", name: "TechCart", component: TechCart },
     { path: "/tmp-5/shop", name: "TechShop", component: TechShop },
-
+    { path: "/tmp-5/contact", name: "TechContact", component: TechContact },
 
     //sports template routes
     { path: "/tmp-6/home", name: "SportsHome", component: SportsHome },
@@ -62,12 +70,12 @@ const routes = [
     { path: "/tmp-6/shop", name: "SportsShop", component: SportsShop },
     { path: "/tmp-6/contact", name: "SportsContact", component: SportsContact },
 
+    { path: "/profile", name: "AccountProfile", component: AccountProfile },
 
 
     //  //footwear template routes
     //  { path: "/", element: <FootwearHome /> },
     //  { path: "/contact", element: <Contact /> },
-    //  { path: "/profile", element: <AccountProfile /> },
     //  { path: "/track-order", element: <TrackOrder /> },
 
     //  { path: "/auth/signup", element: <Signup /> },
