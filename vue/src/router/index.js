@@ -39,6 +39,11 @@ import TrackSportsOrders from "../views/sports/TrackOrders.vue";
 import TrackTechOrders from "../views/tech/TrackOrders.vue";
 import TrackWatchOrders from "../views/wristwatch/TrackOrders.vue";
 
+//auth components
+import Signup from "../views/auth/Signup.vue";
+import Login from "../views/auth/Login.vue";
+
+//profile component
 import AccountProfile from "../views/profile/AccountProfile.vue";
 
 const routes = [
@@ -115,10 +120,12 @@ const routes = [
         component: TrackSportsOrders,
     },
 
+    //profile route
     { path: "/profile", name: "AccountProfile", component: AccountProfile },
 
-    //  { path: "/auth/signup", element: <Signup /> },
-    //  { path: "/auth/login", element: <Login /> },
+    //auth routes
+    { path: "/auth/signup", name: "Signup", component: Signup },
+    { path: "/auth/login", name: "Login", component: Login },
 ];
 
 const router = createRouter({
