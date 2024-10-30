@@ -89,13 +89,13 @@
           <h2 class="text-[20px] font-semibold">Payment Method</h2>
           <div class="flex justify-between py-3 px-6 bg-[#fff] border border-[#808080] rounded-lg">
             <div class="flex items-center space-x-3">
-              <input type="radio" name="creditCard" id="creditCard" />
+              <input type="radio" name="paymentMethod" id="creditCard" />
               <label for="creditCard" class="text-[12px] font-semibold uppercase">Pay by credit card</label>
             </div>
             <CreditCardIcon />
           </div>
           <div class="flex items-center space-x-3 bg-[#fff] border border-[#808080] py-3 px-6 rounded-lg">
-            <input type="radio" name="paypal" id="paypal" />
+            <input type="radio" name="paymentMethod" id="paypal" />
             <label for="paypal" class="text-[12px] font-semibold uppercase">PayPal</label>
           </div>
           <hr />
@@ -138,7 +138,7 @@
   </template>
   
   <script>
-  import CreditCardIcon from "../../components/icons/extras/CreditCardIcon.vue"; // Adjust the path as necessary
+  import CreditCardIcon from "../icons/extras/CreditCardIcon.vue";
   
   export default {
     components: {

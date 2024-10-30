@@ -144,7 +144,7 @@ const CheckoutDetails: FC<DetailsProps> = ({ setActiveTab }) => {
           <h2 className="text-[20px] font-semibold">Payment Method</h2>
           <div className="flex justify-between py-3 px-6 bg-[#fff] border border-[#808080] rounded-lg">
             <div className="flex items-center space-x-3">
-              <input type="radio" name="creditCard" id="creditCard" />
+              <input type="radio" name="paymentMethod" id="creditCard" />
               <label
                 htmlFor="creditCard"
                 className="text-[12px] font-semibold uppercase"
@@ -154,8 +154,9 @@ const CheckoutDetails: FC<DetailsProps> = ({ setActiveTab }) => {
             </div>
             <CreditCardIcon />
           </div>
+
           <div className="flex items-center space-x-3 bg-[#fff] border border-[#808080] py-3 px-6 rounded-lg">
-            <input type="radio" name="paypal" id="paypal" />
+            <input type="radio" name="paymentMethod" id="paypal" />
             <label
               htmlFor="paypal"
               className="text-[12px] font-semibold uppercase"
@@ -163,6 +164,7 @@ const CheckoutDetails: FC<DetailsProps> = ({ setActiveTab }) => {
               PayPal
             </label>
           </div>
+
           <hr />
           <div className="flex flex-col space-y-2 w-[100%]">
             <label

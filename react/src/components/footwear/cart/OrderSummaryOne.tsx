@@ -26,7 +26,7 @@ const OrderSummaryOne: FC<SummaryProps> = ({ themeColor, total, setActiveTab }) 
             <input
               type="radio"
               defaultChecked
-              name="deliveryFee"
+              name="deliveryMethod"
               id="deliveryFee"
             />
             <h2>Delivery Fee</h2>
@@ -38,7 +38,7 @@ const OrderSummaryOne: FC<SummaryProps> = ({ themeColor, total, setActiveTab }) 
         </div>
         <div className="flex justify-between p-3 rounded-lg border border-[#333]">
           <div className="flex items-center space-x-3">
-            <input type="radio" name="pickup" id="pickup" />
+            <input type="radio" name="deliveryMethod" id="pickup" />
             <h2>Pickup</h2>
           </div>
           <p className="flex items-center font-semibold space-x-2 text-[14px]">
