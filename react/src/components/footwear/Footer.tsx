@@ -50,8 +50,8 @@ const Footer: FC<FooterProps> = ({ active }) => {
 
         <div className="lg:border-b border-[#808080] lg:my-14"></div>
 
-        <div className="flex lg:flex-row flex-col bg-[#000] lg:mt-[20vh] py-10 lg:pt-0 lg:mb-[10vh] justify-between px-6">
-          <div>
+        <div className="flex lg:flex-row flex-col bg-[#000] lg:mt-[20vh] py-10 lg:pt-0 lg:mb-[10vh] justify-between space-x-10 px-6">
+          <div className="w-[40%]">
             <div className="flex items-center lg:space-x-3 space-x-2">
               <img
                 src="/assets/logo.png"
@@ -62,7 +62,7 @@ const Footer: FC<FooterProps> = ({ active }) => {
                 Ecommerce
               </h2>
             </div>
-            <p className="lg:w-[465px] font-light mt-4">
+            <p className="font-light mt-4">
               With SIKO PIECES, shop for your type of time piece, be it the
               casual, sporty or luxurious piece. SIKO is here for you!
             </p>
@@ -74,7 +74,7 @@ const Footer: FC<FooterProps> = ({ active }) => {
             </div>
           </div>
 
-          <div className="">
+          <div className="w-[55%]">
             <div className="lg:flex lg:flex-row grid grid-cols-2 lg:space-x-[8vw] justify-between lg:space-y-0 gap-10 lg:mt-0 mt-10">
               <div className="space-y-4 flex flex-col">
                 <h2 className="lg:text-[20px] text-[18px] font-semibold">

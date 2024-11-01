@@ -8,8 +8,8 @@ interface AdProps {
 
 const Ad: FC<AdProps> = ({ setCloseAd }) => {
   return (
-    <div className="w-[100%] bg-[#000] text-[#fff] py-3">
-      <div className="w-[90vw] lg:text-[15px] text-[12px] mx-auto flex justify-between">
+    <div className="w-[100%] bg-[#000] text-[rgb(255,255,255)] py-2">
+      <div className="w-[90vw] lg:text-[13px] text-[12px] mx-auto flex justify-between">
         <div className="lg:block hidden"></div>
         <NavLink to="/auth/signup" className="">
           Signup and get 20% off your first order. Sign Up Now
