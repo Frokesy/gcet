@@ -5,7 +5,7 @@ import { SearchIcon } from "../svgs/headerIcons";
 import { FC, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Product from "../footwear/Product";
-
+import { motion } from "framer-motion";
 
 interface ShopTemplateProps {
   products: ProductProps[];
@@ -20,11 +20,13 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
 }) => {
   const [product, setProduct] = useState<ProductProps>();
   const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
+  const [showFilter, setShowFilter] = useState<boolean>(true);
 
   const handlePriceChange = (min: number, max: number) => {
     setPriceRange({ min, max });
     return priceRange;
   };
+
   return (
     <div className="pt-[15vh] pb-10 lg:w-[90vw] mx-auto">
       <div className="flex space-x-6 w-[90vw] mx-auto">
@@ -188,8 +190,11 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
           <div className="mt-10 w-[90vw] mx-auto">
             {/**Desktop selector */}
             <div className="lg:flex hidden justify-between items-center">
-              <div className="flex items-center justify-between w-[15%]">
-                <p>Hide Filters</p>
+              <div
+                onClick={() => setShowFilter(!showFilter)}
+                className="flex items-center justify-between w-[15%] cursor-pointer"
+              >
+                <p>{showFilter ? "Hide Filters" : "Show Filters"}</p>
                 <FilterIcon />
               </div>
               <div className="input border border-[#ccc] flex items-center rounded-full py-1.5 px-5 w-[30%] bg-[#eee] space-x-3">
@@ -208,8 +213,11 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
 
             {/**Mobile selector*/}
             <div className="flex lg:hidden flex-col justify-between items-center">
-              <div className="flex items-center justify-between w-[100%]">
-                <p>Hide Filters</p>
+              <div
+                onClick={() => setShowFilter(!showFilter)}
+                className="flex items-center justify-between w-[100%]"
+              >
+                <p>{showFilter ? "Hide Filters" : "Show Filters"}</p>
                 <FilterIcon />
               </div>
               <div className="flex justify-between w-[100%] mt-6">
@@ -228,43 +236,55 @@ const ShopTemplate: FC<ShopTemplateProps> = ({
               </div>
             </div>
 
-            <div className="flex justify-between lg:space-x-16 mt-10">
-              <div className="lg:flex hidden flex-col w-[15%]">
-                <h2>Selected filters</h2>
-                <button
-                  className={`p-2 bg-[${themeColor}] w-12 text-[#fff] uppercase mt-3 mb-6`}
+            <div className="flex lg:flex-row flex-col justify-between lg:space-x-16 mt-10">
+              {showFilter ? (
+                <motion.div
+                  className="flex flex-col lg:w-[15%]"
+                  initial={{ y: -50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -200, opacity: 0 }}
+                  transition={{ type: "tween", duration: 0.3 }}
                 >
-                  All
-                </button>
+                  <h2>Selected filters</h2>
+                  <button
+                    className={`p-2 bg-[${themeColor}] w-12 text-[#fff] uppercase mt-3 mb-6`}
+                  >
+                    All
+                  </button>
 
-                <div className="space-y-8 mt-6 w-[100%]">
-                  <div className="flex items-center justify-between">
-                    <p>Gender</p>
-                    <ArrowDown />
+                  <div className="space-y-8 mt-6 w-[100%]">
+                    <div className="flex items-center justify-between">
+                      <p>Gender</p>
+                      <ArrowDown />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p>Type</p>
+                      <ArrowDown />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p>Color</p>
+                      <ArrowDown />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p>Brand</p>
+                      <ArrowDown />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p>Collections</p>
+                      <ArrowDown />
+                    </div>
+                    <div className="mx-auto lg:w-[100%] w-[50%] pb-10">
+                      <PriceRangeSlider
+                        min={0}
+                        max={1000}
+                        onChange={handlePriceChange}
+                      />
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <p>Type</p>
-                    <ArrowDown />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p>Color</p>
-                    <ArrowDown />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p>Brand</p>
-                    <ArrowDown />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p>Collections</p>
-                    <ArrowDown />
-                  </div>
-                  <PriceRangeSlider
-                    min={0}
-                    max={1000}
-                    onChange={handlePriceChange}
-                  />
-                </div>
-              </div>
+                </motion.div>
+              ) : (
+                <div className="w-[15%]"></div>
+              )}
 
               <div className="lg:w-[85%]">
                 <ShopCatalog setProduct={setProduct} items={products} />
