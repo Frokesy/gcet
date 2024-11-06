@@ -8,9 +8,9 @@ const CategoriesDropdown: FC<CategoriesDropdownProps> = ({ active }) => {
   return (
     <div>
       {active === "footwear" && (
-        <div className="bg-[#fff] shadow-xl w-[100%] py-10 fixed">
+        <div className="lg:bg-[#fff] lg:shadow-xl w-[100%] lg:py-10 lg:fixed">
           <div className="w-[90vw] mx-auto">
-            <div className="w-[60%] grid grid-cols-4">
+            <div className="lg:w-[60%] grid lg:grid-cols-4 grid-cols-2 gap-10">
               <div className="space-y-4 text-[14px]">
                 <h2 className="font-semibold text-[16px] uppercase">
                   Featured
@@ -52,9 +52,9 @@ const CategoriesDropdown: FC<CategoriesDropdownProps> = ({ active }) => {
       )}
 
       {active === "wristwatch" && (
-        <div className="bg-[#fff] shadow-xl w-[100%] py-10 fixed">
+        <div className="bg-[#fff] lg:shadow-xl w-[100%] lg:py-10 lg:fixed">
           <div className="w-[90vw] mx-auto">
-            <div className="w-[70%] grid grid-cols-4">
+            <div className="lg:w-[70%] grid lg:grid-cols-4 grid-cols-2 gap-10">
               <div className="space-y-4 text-[14px]">
                 <h2 className="font-semibold text-[16px] uppercase">
                   Featured
@@ -86,9 +86,9 @@ const CategoriesDropdown: FC<CategoriesDropdownProps> = ({ active }) => {
       )}
 
       {active === "clothes" && (
-        <div className="bg-[#fff] shadow-xl w-[100%] py-10 fixed">
+        <div className="bg-[#fff] lg:shadow-xl w-[100%] lg:py-10 lg:fixed">
           <div className="w-[90vw] mx-auto">
-            <div className="w-[80%] grid grid-cols-5">
+            <div className="lg:w-[80%] grid lg:grid-cols-5 grid-cols-2 gap-10">
               <div className="space-y-4 text-[14px]">
                 <h2 className="font-semibold text-[16px] uppercase">
                   Featured
@@ -133,9 +133,9 @@ const CategoriesDropdown: FC<CategoriesDropdownProps> = ({ active }) => {
       )}
 
       {active === "furniture" && (
-        <div className="bg-[#fff] shadow-xl w-[100%] py-10 fixed">
+        <div className="bg-[#fff] lg:shadow-xl w-[100%] lg:py-10 lg:fixed">
           <div className="w-[90vw] mx-auto">
-            <div className="w-[80%] grid grid-cols-5">
+            <div className="lg:w-[80%] grid lg:grid-cols-5 grid-cols-2 gap-10">
               <div className="space-y-4 text-[14px]">
                 <h2 className="font-semibold text-[16px] uppercase">
                   Featured
@@ -184,9 +184,9 @@ const CategoriesDropdown: FC<CategoriesDropdownProps> = ({ active }) => {
       )}
 
       {active === "tech" && (
-        <div className="bg-[#fff] shadow-xl w-[100%] py-10 fixed">
+        <div className="bg-[#fff] lg:shadow-xl w-[100%] lg:py-10 lg:fixed">
           <div className="w-[90vw] mx-auto">
-            <div className="w-[80%] flex justify-between">
+            <div className="lg:w-[80%] lg:flex justify-between grid grid-cols-2 gap-10">
               <div className="space-y-4 text-[14px]">
                 <h2 className="font-semibold text-[16px] uppercase">
                   Featured
@@ -251,9 +251,9 @@ const CategoriesDropdown: FC<CategoriesDropdownProps> = ({ active }) => {
       )}
 
       {active === "sports" && (
-        <div className="bg-[#fff] shadow-xl w-[100%] py-10 fixed">
+        <div className="bg-[#fff] lg:shadow-xl w-[100%] lg:py-10 lg:fixed">
           <div className="w-[90vw] mx-auto">
-            <div className="w-[100%] flex justify-between">
+            <div className="w-[100%] lg:flex justify-between grid grid-cols-2 gap-10">
               <div className="space-y-4 text-[14px]">
                 <h2 className="font-semibold text-[16px] uppercase">
                   Featured

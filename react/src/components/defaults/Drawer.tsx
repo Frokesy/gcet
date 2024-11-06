@@ -3,6 +3,8 @@ import React, { FC, SetStateAction, useState } from "react";
 import { NavLink } from "react-router-dom";
 import HomeDropdown from "../dropdowns/HomeDropdown";
 import { ArrowDown } from "../svgs/extras";
+import CategoriesDropdown from "../dropdowns/CategoriesDropdown";
+import BrandDropdown from "../dropdowns/BrandDropdown";
 
 interface DrawerProps {
   setOpenDrawer: React.Dispatch<SetStateAction<boolean>>;
@@ -16,21 +18,25 @@ const dropdownVariants = {
 };
 
 const Drawer: FC<DrawerProps> = ({ setOpenDrawer, active }) => {
-  //   const [revealCategoryDropdown, setRevealCategoryDropdown] =
-  //     useState<boolean>(false);
-  //   const [revealBrandDropdown, setRevealBrandDropdown] =
-  //     useState<boolean>(false);
+  const [revealCategoryDropdown, setRevealCategoryDropdown] =
+    useState<boolean>(false);
+  const [revealBrandDropdown, setRevealBrandDropdown] =
+    useState<boolean>(false);
   const [revealHomeDropdown, setRevealHomeDropdown] = useState<boolean>(false);
-  const [isRotated, setIsRotated] = useState(false);
 
-  const handleClick = () => {
-    setRevealHomeDropdown(!revealHomeDropdown);
-    setIsRotated(!isRotated);
+  const handleClick = (tab: string) => {
+    if (tab === "home") {
+      setRevealHomeDropdown(!revealHomeDropdown);
+    } else if (tab === "categories") {
+      setRevealCategoryDropdown(!revealCategoryDropdown);
+    } else if (tab === "brands") {
+      setRevealBrandDropdown(!revealBrandDropdown);
+    }
   };
 
   return (
     <>
-      <div className="fixed top-0 h-screen font-serif z-50 w-screen">
+      <div className="fixed top-0 min-h-screen font-serif z-50 w-screen">
         <div className="">
           <motion.div
             className="flex flex-col space-y-[30px] bg-[#fff] h-screen w-[100%] pt-6 px-6 text-[18px] text-[#000]"
@@ -48,13 +54,13 @@ const Drawer: FC<DrawerProps> = ({ setOpenDrawer, active }) => {
             </div>
             <div className="space-y-4">
               <div
-                onClick={handleClick}
+                onClick={() => handleClick("home")}
                 className="flex justify-between items-center"
               >
                 <p>Home</p>
                 <div
                   className={`transition-transform duration-300 ${
-                    isRotated ? "rotate-0" : "-rotate-90"
+                    revealHomeDropdown ? "rotate-0" : "-rotate-90"
                   }`}
                 >
                   <ArrowDown />
@@ -71,18 +77,57 @@ const Drawer: FC<DrawerProps> = ({ setOpenDrawer, active }) => {
                 </motion.div>
               )}
             </div>
-            <div className="flex justify-between items-center">
-              <p>Categories</p>
-              <div className="-rotate-90">
-                <ArrowDown />
+            <div className="space-y-4">
+              <div
+                onClick={() => handleClick("categories")}
+                className="flex justify-between items-center"
+              >
+                <p>Categories</p>
+                <div
+                  className={`transition-transform duration-300 ${
+                    revealCategoryDropdown ? "rotate-0" : "-rotate-90"
+                  }`}
+                >
+                  <ArrowDown />
+                </div>
               </div>
+              {revealCategoryDropdown && (
+                <motion.div
+                  variants={dropdownVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <CategoriesDropdown active={active} />
+                </motion.div>
+              )}
             </div>
-            <div className="flex justify-between items-center">
-              <p>Brands</p>
-              <div className="-rotate-90">
-                <ArrowDown />
+            <div className="space-y-4">
+              <div
+                onClick={() => handleClick("brands")}
+                className="flex justify-between items-center"
+              >
+                <p>Brands</p>
+                <div
+                  className={`transition-transform duration-300 ${
+                    revealBrandDropdown ? "rotate-0" : "-rotate-90"
+                  }`}
+                >
+                  <ArrowDown />
+                </div>
               </div>
+              {revealBrandDropdown && (
+                <motion.div
+                  variants={dropdownVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <BrandDropdown active={active} />
+                </motion.div>
+              )}
             </div>
+
             {active === "footwear" && <NavLink to="/shop">Shop</NavLink>}
             {active === "wristwatch" && (
               <NavLink to="/tmp-2/shop">Shop</NavLink>

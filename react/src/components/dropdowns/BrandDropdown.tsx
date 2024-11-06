@@ -38,11 +38,11 @@ interface BrandDropdownProps {
 
 const BrandDropdown: FC<BrandDropdownProps> = ({ active }) => {
   return (
-    <div className="bg-[#fff] shadow-xl w-[100%] py-10 fixed">
+    <div className="bg-[#fff] lg:shadow-xl w-[100%] lg:py-10 lg:fixed">
       {active === "footwear" && (
         <div className="w-[90vw] mx-auto">
-          <h2 className="uppercase font-semibold">Brands</h2>
-          <div className="flex items-center justify-between mt-4">
+          <h2 className="uppercase font-semibold lg:block hidden">Brands</h2>
+          <div className="lg:flex grid grid-cols-4 items-center justify-between my-6">
             <Nike />
             <Adidas />
             <Puma />
@@ -55,8 +55,8 @@ const BrandDropdown: FC<BrandDropdownProps> = ({ active }) => {
       )}
       {active === "wristwatch" && (
         <div className="w-[90vw] mx-auto">
-          <h2 className="uppercase font-semibold">Brands</h2>
-          <div className="flex items-center justify-between mt-4">
+          <h2 className="uppercase font-semibold lg:block hidden">Brands</h2>
+          <div className="lg:flex grid grid-cols-2 gap-6 items-center justify-between my-6">
             <LuisVuitton />
             <TagHeuer />
             <RichardMille />
@@ -69,8 +69,8 @@ const BrandDropdown: FC<BrandDropdownProps> = ({ active }) => {
       )}
       {active === "furniture" && (
         <div className="w-[90vw] mx-auto">
-          <h2 className="uppercase font-semibold">Brands</h2>
-          <div className="flex items-center justify-between mt-4">
+          <h2 className="uppercase font-semibold lg:block hidden">Brands</h2>
+          <div className="lg:flex grid grid-cols-4 items-center justify-between my-6">
             <Knoll />
             <Red />
             <Helm />
@@ -83,8 +83,8 @@ const BrandDropdown: FC<BrandDropdownProps> = ({ active }) => {
 
       {active === "clothes" && (
         <div className="w-[90vw] mx-auto">
-          <h2 className="uppercase font-semibold">Brands</h2>
-          <div className="flex items-center justify-between mt-4">
+          <h2 className="uppercase font-semibold lg:block hidden">Brands</h2>
+          <div className="lg:flex grid grid-cols-1 gap-6 items-center justify-between my-6">
             <Nike />
             <Prada />
             <Gucci />
@@ -95,8 +95,8 @@ const BrandDropdown: FC<BrandDropdownProps> = ({ active }) => {
 
       {active === "tech" && (
         <div className="w-[90vw] mx-auto">
-          <h2 className="uppercase font-semibold">Brands</h2>
-          <div className="flex items-center justify-between mt-4">
+          <h2 className="uppercase font-semibold lg:block hidden">Brands</h2>
+          <div className="lg:flex grid grid-cols-3 items-center justify-between my-6">
             <Hp />
             <Apple />
             <Samsung />
@@ -110,8 +110,8 @@ const BrandDropdown: FC<BrandDropdownProps> = ({ active }) => {
 
       {active === "sports" && (
         <div className="w-[90vw] mx-auto">
-          <h2 className="uppercase font-semibold">Brands</h2>
-          <div className="flex items-center justify-between mt-4">
+          <h2 className="uppercase font-semibold lg:block hidden">Brands</h2>
+          <div className="lg:flex grid grid-cols-4 items-center justify-between my-6">
             <Nike />
             <Adidas />
             <Puma />
