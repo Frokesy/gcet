@@ -72,8 +72,9 @@
             <div class="mt-10 w-[90vw] mx-auto">
                 <!-- Desktop selector -->
                 <div class="lg:flex hidden justify-between items-center">
-                    <div class="flex items-center justify-between w-[15%]">
-                        <p>Hide Filters</p>
+                    <div @click="showFilter = !showFilter"
+                        class="flex items-center justify-between w-[15%] cursor-pointer">
+                        <p>{{ showFilter ? 'Hide Filters' : 'Show Filters' }}</p>
                         <FilterIcon />
                     </div>
                     <div
@@ -90,8 +91,8 @@
 
                 <!-- Mobile selector -->
                 <div class="flex lg:hidden flex-col justify-between items-center">
-                    <div class="flex items-center justify-between w-[100%]">
-                        <p>Hide Filters</p>
+                    <div @click="showFilter = !showFilter" class="flex items-center justify-between w-[100%]">
+                        <p>{{ showFilter ? 'Hide Filters' : 'Show Filters' }}</p>
                         <FilterIcon />
                     </div>
                     <div class="flex justify-between w-[100%] mt-6">
@@ -107,37 +108,45 @@
                     </div>
                 </div>
 
-                <div class="flex justify-between lg:space-x-16 mt-10">
-                    <div class="lg:flex hidden flex-col w-[15%]">
-                        <h2>Selected filters</h2>
-                        <button :style="{ backgroundColor: themeColor }"
-                            class="p-2 w-12 text-[#fff] uppercase mt-3 mb-6">
-                            All
-                        </button>
-                        <div class="space-y-8 mt-6 w-[100%]">
-                            <div class="flex items-center justify-between">
-                                <p>Gender</p>
-                                <ArrowDown />
+                <div className="flex lg:flex-row flex-col justify-between lg:space-x-16 mt-10">
+                    <Transition enter-active-class="transition-all duration-300"
+                        leave-active-class="transition-all duration-300" @before-enter="onBeforeEnter" @enter="onEnter"
+                        @leave="onLeave">
+                        <div v-if="showFilter" class="flex flex-col lg:w-[15%]">
+                            <h2>Selected filters</h2>
+                            <button :class="`p-2 w-12 text-[#fff] uppercase mt-3 mb-6`"
+                                :style="{ backgroundColor: themeColor }">
+                                All
+                            </button>
+
+                            <div class="space-y-8 mt-6 w-[100%]">
+                                <div class="flex items-center justify-between">
+                                    <p>Gender</p>
+                                    <ArrowDown />
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>Type</p>
+                                    <ArrowDown />
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>Color</p>
+                                    <ArrowDown />
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>Brand</p>
+                                    <ArrowDown />
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>Collections</p>
+                                    <ArrowDown />
+                                </div>
+                                <div class="mx-auto lg:w-[100%] w-[50%] pb-10">
+                                    <PriceRangeSlider :min="0" :max="1000" @change="handlePriceChange" />
+                                </div>
                             </div>
-                            <div class="flex items-center justify-between">
-                                <p>Type</p>
-                                <ArrowDown />
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <p>Color</p>
-                                <ArrowDown />
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <p>Brand</p>
-                                <ArrowDown />
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <p>Collections</p>
-                                <ArrowDown />
-                            </div>
-                            <PriceRangeSlider :min="0" :max="1000" @change="handlePriceChange" />
                         </div>
-                    </div>
+                        <div v-else class="w-[15%]"></div>
+                    </Transition>
 
                     <div class="lg:w-[85%]">
                         <ShopCatalog :setProduct="setProduct" :items="products" />
@@ -181,6 +190,7 @@ export default defineComponent({
     setup(props) {
         const product = ref(undefined);
         const priceRange = ref({ min: 0, max: 1000 });
+        const showFilter = ref(false)
 
         const handlePriceChange = (min, max) => {
             priceRange.value = { min, max };
@@ -206,6 +216,26 @@ export default defineComponent({
             return links[active] || '/';
         };
 
+        // Animation functions
+        const onBeforeEnter = (el) => {
+            el.style.opacity = 0
+            el.style.transform = 'translateY(-50px)'
+        }
+
+        const onEnter = (el, done) => {
+            el.style.transition = 'all 0.3s ease'
+            el.style.opacity = 1
+            el.style.transform = 'translateY(0)'
+            el.addEventListener('transitionend', done)
+        }
+
+        const onLeave = (el, done) => {
+            el.style.transition = 'all 0.3s ease'
+            el.style.opacity = 0
+            el.style.transform = 'translateY(-200px)'
+            el.addEventListener('transitionend', done)
+        }
+
         return {
             product,
             priceRange,
@@ -214,6 +244,10 @@ export default defineComponent({
             setProduct,
             getBackLink,
             props,
+            showFilter,
+            onBeforeEnter,
+            onEnter,
+            onLeave
         };
     },
 });
